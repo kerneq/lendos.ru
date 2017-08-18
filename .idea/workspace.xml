@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,14 +20,14 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="183" column="57" lean-forward="false" selection-start-line="183" selection-start-column="57" selection-end-line="183" selection-end-column="57" />
+            <state relative-caret-position="173">
+              <caret line="182" column="58" lean-forward="false" selection-start-line="182" selection-start-column="58" selection-end-line="182" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1503076708187" expanded="false" signature="6883:6889" ph="⋅" />
-                <marker date="1503076708187" expanded="false" signature="7070:7076" ph="⋅" />
+                <marker date="1503077667136" expanded="false" signature="6884:6890" ph="⋅" />
+                <marker date="1503077667136" expanded="false" signature="7071:7077" ph="⋅" />
               </folding>
             </state>
           </provider>
@@ -336,7 +335,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8708000" />
+    <option name="totallyTimeSpent" value="9404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1309" height="780" extended-state="6" />
@@ -380,8 +379,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1503076708187" expanded="false" signature="6883:6889" ph="⋅" />
-            <marker date="1503076708187" expanded="false" signature="7070:7076" ph="⋅" />
+            <marker date="1503077667136" expanded="false" signature="6884:6890" ph="⋅" />
+            <marker date="1503077667136" expanded="false" signature="7071:7077" ph="⋅" />
           </folding>
         </state>
       </provider>
@@ -428,8 +427,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1503076708187" expanded="false" signature="6883:6889" ph="⋅" />
-            <marker date="1503076708187" expanded="false" signature="7070:7076" ph="⋅" />
+            <marker date="1503077667136" expanded="false" signature="6884:6890" ph="⋅" />
+            <marker date="1503077667136" expanded="false" signature="7071:7077" ph="⋅" />
           </folding>
         </state>
       </provider>
@@ -479,14 +478,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="183" column="57" lean-forward="false" selection-start-line="183" selection-start-column="57" selection-end-line="183" selection-end-column="57" />
+        <state relative-caret-position="173">
+          <caret line="182" column="58" lean-forward="false" selection-start-line="182" selection-start-column="58" selection-end-line="182" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1503076708187" expanded="false" signature="6883:6889" ph="⋅" />
-            <marker date="1503076708187" expanded="false" signature="7070:7076" ph="⋅" />
+            <marker date="1503077667136" expanded="false" signature="6884:6890" ph="⋅" />
+            <marker date="1503077667136" expanded="false" signature="7071:7077" ph="⋅" />
           </folding>
         </state>
       </provider>
