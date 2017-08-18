@@ -26,20 +26,20 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">Lendos.ru</a>
+      <a class="navbar-brand" href="#header">Lendos.ru</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Для кого</a>
+            <a class="nav-link" href="#for-people">Для кого</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Стоимость</a>
+            <a class="nav-link" href="#costs">Стоимость</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Заказать</a>
+            <a class="nav-link" href="#beCustomer">Заказать</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Войти/Регистрация</a>
@@ -49,7 +49,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="intro-header">
+    <header class="intro-header" id="header">
       <div class="container">
         <div class="intro-message">
           <h1>Копируем лендинги</h1>
@@ -69,7 +69,7 @@
     </header>
 
     <!-- Page Content -->
-    <section class="content-section-a">
+    <section class="content-section-a" id="for-people">
 
       <div class="container">
         <div class="row">
@@ -124,7 +124,7 @@
     </section>
     <!-- /.content-section-b -->
 
-    <section class="content-section-a">
+    <section class="content-section-a" id="costs">
 
       <div class="container">
 
@@ -154,7 +154,7 @@
     </section>
     <!-- /.content-section-a -->
 
-    <aside class="banner">
+    <aside class="banner" id="beCustomer">
 
       <div class="container">
 
@@ -197,19 +197,19 @@
       <div class="container">
         <ul class="list-inline">
           <li class="list-inline-item">
-            <a href="#">Для кого</a>
+            <a href="#for-people" class="bot-link">Для кого</a>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#about">Стоимость</a>
+            <a href="#costs" class="bot-link">Стоимость</a>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#services">Заказать</a>
+            <a href="#beCustomer" class="bot-link">Заказать</a>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#contact">Вход/Регистрация</a>
+            <a href="#contact" class="bot-link">Вход/Регистрация</a>
           </li>
         </ul>
         <p class="copyright text-muted small">Lendos.ru 2017 быстрое копирование и редактирование лендингов</p>
@@ -220,6 +220,21 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("a.nav-link, a.bot-link, a.navbar-brand").click(function() {
+                $("html, body").animate({
+                    scrollTop: $($(this).attr("href")).offset().top + "px"
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+                return false;
+            });
+        });
+    </script>
+
 
   </body>
 
