@@ -158,31 +158,31 @@
 
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6 my-auto">
-            <h2>Отправить нам задачу</h2>
+        <div class="row" id="first-stap">
+          <div class="col-lg-6 my-auto" style="display: inline-block">
+            <h2>Введите url лендинга</h2>
           </div>
-          <div class="col-lg-6 my-auto">
-            <ul class="list-inline banner-social-buttons">
-              <li class="list-inline-item">
-                <a href="#" class="btn btn-secondary btn-lg">
-                  <i class="fa fa-twitter fa-fw"></i>
-                  <span class="network-name">Twitter</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" class="btn btn-secondary btn-lg">
-                  <i class="fa fa-github fa-fw"></i>
-                  <span class="network-name">Github</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" class="btn btn-secondary btn-lg">
-                  <i class="fa fa-linkedin fa-fw"></i>
-                  <span class="network-name">Linkedin</span>
-                </a>
-              </li>
-            </ul>
+
+          <div class="col-lg-4 input-group">
+            <input type="url" class="form-control" placeholder="http://site.ru" name="site-url" style="width:100%;"/>
+          </div>
+
+          <div class="col-lg-2 my-auto">
+            <a href="#beCustomer" class="btn btn-secondary btn-lg" id="completed">
+              <span class="network-name">Копировать</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="row" id="second-stap" style="display: none;">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+            <div class="alert alert-info">
+              Заказ отправлен, чтобы окончательно оформить его автозируйтесь в нашей системе через одну из социальных сетей
+              </br>
+              <a href="#"><img src="img/vk.png" width="45"/></a>
+              <a href=""#><img src="img/fb.png" width="41"/></a>
+            </div>
           </div>
         </div>
 
@@ -228,6 +228,17 @@
                 });
                 return false;
             });
+        });
+
+        $(document).ready(function() {
+            $("#completed").click((function(){
+                return function()
+                {
+                    $("#first-stap").hide("fast", function() {
+                        $("#second-stap").show("fast");
+                    });
+                }
+            })());
         });
     </script>
 
