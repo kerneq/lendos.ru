@@ -58,7 +58,7 @@
           <ul class="list-inline intro-social-buttons">
 
             <li class="list-inline-item">
-              <a href="#" class="btn btn-secondary btn-lg">
+              <a href="#beCustomer" class="main-bnt btn btn-secondary btn-lg">
                 <span class="network-name">НАЧАТЬ КОПИРОВАНИЕ ЛЕНДИНГА</span>
               </a>
             </li>
@@ -205,10 +205,6 @@
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#beCustomer" class="bot-link">Заказать</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
             <a href="#contact" class="bot-link">Вход/Регистрация</a>
           </li>
         </ul>
@@ -223,7 +219,7 @@
 
     <script>
         $(document).ready(function() {
-            $("a.nav-link, a.bot-link, a.navbar-brand").click(function() {
+            $("a.nav-link, a.bot-link, a.navbar-brand, a.main-bnt").click(function() {
                 $("html, body").animate({
                     scrollTop: $($(this).attr("href")).offset().top + "px"
                 }, {
