@@ -164,7 +164,11 @@
           </div>
 
           <div class="col-lg-4 input-group">
-            <input type="url" class="form-control" placeholder="http://site.ru" name="site-url" style="width:100%;"/>
+            <input type="text" placeholder="http://site.ru" class="form-control"
+                   required aria-required="true"
+                   pattern="^(https?://)?([a-zA-Z0-9]([a-zA-ZäöüÄÖÜ0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$"
+                   name="url" style="width:100%;"
+                   id="site-url" />
           </div>
 
           <div class="col-lg-2 my-auto">
@@ -180,8 +184,10 @@
             <div class="alert alert-info">
               Заказ отправлен, чтобы окончательно оформить его автозируйтесь в нашей системе через одну из социальных сетей
               </br>
-              <a href="#"><img src="img/vk2.png" width="41"/></a>
-              <a href=""#><img src="img/fb.png" width="41"/></a>
+              <div align="center">
+                <a href="#" style="margin-right: 5px"><img src="img/vk2.png" width="41"/></a>
+                <a href="#" style="margin-left: 5px;"><img src="img/fb.png" width="41"/></a>
+              </div>
             </div>
           </div>
         </div>
@@ -240,6 +246,16 @@
                 }
             })());
         });
+
+
+        $("#site-url").keypress(function(e) {
+            if(e.which == 13 && $('#site-url').is(':valid')) {
+                $("#first-stap").hide("fast", function() {
+                    $("#second-stap").show("fast");
+                });
+            }
+        });
+
     </script>
 
 
