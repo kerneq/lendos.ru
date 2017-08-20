@@ -240,9 +240,11 @@
             $("#completed").click((function(){
                 return function()
                 {
-                    $("#first-stap").hide("fast", function() {
-                        $("#second-stap").show("fast");
-                    });
+                    if($('#site-url').is(':valid')) {
+                        $("#first-stap").hide("fast", function () {
+                            $("#second-stap").show("fast");
+                        });
+                    }
                 }
             })());
         });
