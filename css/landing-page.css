@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
 
+.error-my {
+  background-color: #ffdddd;
+}
+
 a {
   outline: 0;
 }

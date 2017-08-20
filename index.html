@@ -206,7 +206,9 @@
               <span class="network-name">Копировать</span>
             </a>
           </div>
+
         </div>
+
 
         <div class="row" id="second-stap" style="display: none;">
           <div class="col-lg-3"></div>
@@ -287,6 +289,28 @@
                 });
             }
         });
+
+
+        var typingTimer;
+        var doneTypingInterval = 200;
+        var $input = $('#site-url');
+        //on keyup, start the countdown
+        $input.on('keyup', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+        //on keydown, clear the countdown
+        $input.on('keydown', function () {
+            clearTimeout(typingTimer);
+        });
+        //user is "finished typing," do something
+        function doneTyping () {
+            if ($('#site-url').is(':valid') === false) {
+                $("#site-url").css("background-color", "#ffdddd");
+            } else {
+                $("#site-url").css("background-color", "#99ff99");
+            }
+        }
 
     </script>
 
