@@ -2,85 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/landing-page.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/banner-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/copy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/copy2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/copy3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dog.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/fb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/intro-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/ipad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/module.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/phones.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/pixel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/vk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/vk2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/screen-reader.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/font-awesome/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/jquery/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/jquery/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/popper/popper.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/popper/popper.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TEMPLATE.html" afterPath="$PROJECT_DIR$/TEMPLATE.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,8 +21,8 @@
       <file leaf-file-name="TEMPLATE.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TEMPLATE.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state relative-caret-position="382">
+              <caret line="121" column="78" lean-forward="true" selection-start-line="121" selection-start-column="78" selection-end-line="121" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -269,12 +192,12 @@
       <workItem from="1503130758765" duration="3759000" />
       <workItem from="1503255147791" duration="9006000" />
       <workItem from="1503303669100" duration="3634000" />
-      <workItem from="1503330418847" duration="462000" />
+      <workItem from="1503330418847" duration="1881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26888000" />
+    <option name="totallyTimeSpent" value="28307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1309" height="780" extended-state="6" />
@@ -345,8 +268,8 @@
     <entry file="file://$PROJECT_DIR$/css/landing-page.css" />
     <entry file="file://$PROJECT_DIR$/TEMPLATE.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state relative-caret-position="382">
+          <caret line="121" column="78" lean-forward="true" selection-start-line="121" selection-start-column="78" selection-end-line="121" selection-end-column="78" />
           <folding />
         </state>
       </provider>
