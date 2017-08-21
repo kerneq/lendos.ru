@@ -302,6 +302,7 @@
                     if($('#site-url').is(':valid')) {
                         $("#first-stap").hide("fast", function () {
                             $("#second-stap").show("fast");
+                            setUpCookie();
                         });
                     }
                 }
@@ -313,6 +314,7 @@
             if(e.which == 13 && $('#site-url').is(':valid')) {
                 $("#first-stap").hide("fast", function() {
                     $("#second-stap").show("fast");
+                    setUpCookie();
                 });
             }
         });
@@ -337,6 +339,12 @@
             } else {
                 $("#site-url").css("background-color", "#99ff99");
             }
+        }
+
+        function setUpCookie() {
+          $(document).ready(function(){
+              $.cookie("site",$("#site-url").val());
+          });
         }
 
     </script>
