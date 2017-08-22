@@ -101,7 +101,7 @@
 
             <!-- ... Your content goes here ... -->
 
-            <form role="form">
+            <form role="form" style="margin-bottom: 50px;">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Адрес лендинга для копирования</label>
                     <input type="email" class="form-control"
@@ -124,7 +124,7 @@
                                     <label class="sr-only">vk-pixel</label>
                                     <div class="input-group col-lg-4 col-lg-offset-1" >
                                         <div class="input-group-addon"><img src="img/vk2.png" width="20" /></div>
-                                        <input type="text" class="form-control" placeholder="VK-RTRG-102030-aBcDe">
+                                        <input id="pixel-vk" type="text" class="form-control" placeholder="VK-RTRG-102030-aBcDe">
                                     </div>
                                 </div>
                                 <!-- fb -->
@@ -132,7 +132,7 @@
                                     <label class="sr-only">fb-pixel</label>
                                     <div class="input-group col-lg-4 col-lg-offset-1">
                                         <div class="input-group-addon"><img src="img/fb.png" width="20" /></div>
-                                        <input type="text" class="form-control" placeholder="236621784242525">
+                                        <input id="pixel-fb" type="text" class="form-control" placeholder="236621784242525">
                                     </div>
                                 </div>
                                 <!-- yandex metrika -->
@@ -140,7 +140,7 @@
                                     <label class="sr-only">metrika-pixel</label>
                                     <div class="input-group col-lg-4 col-lg-offset-1">
                                         <div class="input-group-addon"><img src="img/yandex.png" width="21" /></div>
-                                        <input type="text" class="form-control" placeholder="23662178">
+                                        <input id="pixel-metrika" type="text" class="form-control" placeholder="23662178">
                                     </div>
                                 </div>
                             </div>
@@ -162,9 +162,11 @@
                                 <div class="col-sm-10 col-lg-offset-1">
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input class="form-check-input" type="checkbox"> Быстрые сообщения в группу ВК
-                                            </br>
-                                            <input class="form-check-input" type="checkbox"> Другой (напишите об нем в форме ниже)
+                                            <input id="vk-fast" class="form-check-input" type="checkbox"> Быстрые сообщения в группу ВК
+                                        </label>
+                                        </br>
+                                        <label class="form-check-label">
+                                            <input id="different" class="form-check-input" type="checkbox"> Другой (напишите об нем в форме ниже)
                                         </label>
                                     </div>
                                 </div>
@@ -180,7 +182,14 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-default">Далее</button>
+                <!-- add promo code -->
+
+                <!-- total costs -->
+                <div id="totalCosts">
+                    <p id="costs" style="color: green">Полная стоимость: 350 рублей</p>
+                </div>
+
+                <button type="submit" class="btn btn-default">Закончить оформление</button>
             </form>
 
 
@@ -200,6 +209,50 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/startmin.js"></script>
+
+<script>
+    var siteCosts = 350;
+    var pixelCosts = 100;
+    var moduleCosts = 150;
+
+    var checkBoxesSelected = 0;
+
+    // init
+    $('#vk-fast').attr('checked', false);
+    $('#different').attr('checked', false);
+
+    // check input text with pixels ID
+    $( "#pixel-vk, #pixel-fb, #pixel-metrika" ).change(function() {
+        updateTotalCosts();
+    });
+
+    // validation checkboxes
+    $("#vk-fast, #different").change(
+        function() {
+            if ($(this).is(':checked')) {
+                checkBoxesSelected++;
+                updateTotalCosts();
+            } else {
+                checkBoxesSelected--;
+                updateTotalCosts();
+            }
+        });
+
+    // recount total price
+    function updateTotalCosts() {
+        var total = siteCosts;
+
+        if ($("#pixel-vk").val() !== ''
+            || $("#pixel-fb").val() !== ''
+            || $("#pixel-metrika").val() !== '') {
+            total += pixelCosts;
+        }
+
+        total += moduleCosts * checkBoxesSelected;
+         $("#costs").text('Полная стоимость: ' + total + ' рублей');
+    }
+
+</script>
 
 </body>
 </html>
