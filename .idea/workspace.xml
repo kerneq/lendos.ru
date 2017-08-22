@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TEMPLATE.html" afterPath="$PROJECT_DIR$/TEMPLATE.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ORDERS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TEMPLATE.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TEMPLATE.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TEMPLATE.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
@@ -30,6 +31,18 @@
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ORDERS.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ORDERS.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,6 +67,7 @@
         <option value="$PROJECT_DIR$/css/startmin.css" />
         <option value="$PROJECT_DIR$/FINISH_ORDER.html" />
         <option value="$PROJECT_DIR$/TEMPLATE.html" />
+        <option value="$PROJECT_DIR$/ORDERS.html" />
       </list>
     </option>
   </component>
@@ -221,12 +235,12 @@
       <workItem from="1503255147791" duration="9006000" />
       <workItem from="1503303669100" duration="3634000" />
       <workItem from="1503330418847" duration="1881000" />
-      <workItem from="1503389223819" duration="7527000" />
+      <workItem from="1503389223819" duration="9365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39033000" />
+    <option name="totallyTimeSpent" value="40871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1309" height="780" extended-state="6" />
@@ -262,7 +276,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/landing-page.css" />
     <entry file="file://$PROJECT_DIR$/vendor/font-awesome/css/font-awesome.min.css" />
     <entry file="file://$PROJECT_DIR$/img/banner-bg.jpg">
       <provider selected="true" editor-type-id="images">
@@ -372,6 +385,16 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ORDERS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
