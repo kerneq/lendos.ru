@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Профиль</title>
+    <title>Обратная связь</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -95,7 +95,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Ваш профиль</h1>
+                    <h1 class="page-header">Обратная связь</h1>
                 </div>
             </div>
 
@@ -104,66 +104,22 @@
             <form role="form" style="margin-bottom: 50px;">
                 <!-- name  -->
                 <div class="form-group">
-                    <label >*Ваше имя</label>
+                    <label>тема сообщения</label>
                     <input type="text" class="form-control"
-                           placeholder="Станислав"
+                           placeholder="ваш вопрос"
                             style="width: 40%">
                 </div>
                 <!-- second name  -->
-                <div class="form-group">
-                    <label >*Ваша фамилия</label>
-                    <input type="text" class="form-control"
-                           placeholder="Бослун"
-                           style="width: 40%">
-                </div>
-                <!-- e-mail  -->
-                <div class="form-group">
-                    <label >*Ваш e-mail</label>
-                    <input type="email" class="form-control"
-                           placeholder="iters@yandex.ru"
-                           style="width: 40%">
-                </div>
-                <!-- phone  -->
-                <div class="form-group">
-                    <label >Ваш телефон</label>
-                    <input type="text" class="form-control"
-                           placeholder="89092814332"
-                           style="width: 40%">
+                <div class="form-group col-lg-5" style="position: relative; right: 15px;">
+                    <label >Ваше сообщение</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
 
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse"
-                       href="#multiCollapseExample1" aria-expanded="false"
-                       aria-controls="multiCollapseExample1">Добавить страницы социальных сетей</a>
-                </p>
-                <div class="row">
-                    <div class="col">
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
-                            <div class="card card-body">
-                                <!-- vk -->
-                                <div class="col-auto" style="margin-top: 10px;">
-                                    <label class="sr-only">vk-pixel</label>
-                                    <div class="input-group col-lg-4 col-lg-offset-1" >
-                                        <div class="input-group-addon"><img src="img/vk2.png" width="20" /></div>
-                                        <input id="pixel-vk" type="text" class="form-control" placeholder="vk.com">
-                                    </div>
-                                </div>
-                                <!-- fb -->
-                                <div class="col-auto" style="margin-top: 10px;">
-                                    <label class="sr-only">fb-pixel</label>
-                                    <div class="input-group col-lg-4 col-lg-offset-1">
-                                        <div class="input-group-addon"><img src="img/fb.png" width="20" /></div>
-                                        <input id="pixel-fb" type="text" class="form-control" placeholder="facebook.com">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div style="clear: both"></div>
+                <p>также можете написать нам в <a href="#">группу VK</a></p>
 
 
-
-                <button type="submit" class="btn btn-success" style="margin-top: 25px;">Сохранить</button>
+                <button type="submit" class="btn btn-success" style="margin-top: 10px;">Отправить</button>
             </form>
 
 
