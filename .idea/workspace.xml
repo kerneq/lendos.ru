@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ORDERS.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PROFILE.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ORDERS.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ORDERS.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ORDERS.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -44,6 +44,16 @@
               <folding>
                 <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PROFILE.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PROFILE.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="165" column="82" lean-forward="false" selection-start-line="165" selection-start-column="82" selection-end-line="165" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,6 +78,7 @@
         <option value="$PROJECT_DIR$/FINISH_ORDER.html" />
         <option value="$PROJECT_DIR$/TEMPLATE.html" />
         <option value="$PROJECT_DIR$/ORDERS.html" />
+        <option value="$PROJECT_DIR$/PROFILE.html" />
       </list>
     </option>
   </component>
@@ -235,12 +246,12 @@
       <workItem from="1503255147791" duration="9006000" />
       <workItem from="1503303669100" duration="3634000" />
       <workItem from="1503330418847" duration="1881000" />
-      <workItem from="1503389223819" duration="9365000" />
+      <workItem from="1503389223819" duration="9848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40871000" />
+    <option name="totallyTimeSpent" value="41354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1309" height="780" extended-state="6" />
@@ -276,7 +287,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/font-awesome/css/font-awesome.min.css" />
     <entry file="file://$PROJECT_DIR$/img/banner-bg.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -396,6 +406,14 @@
           <folding>
             <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROFILE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="165" column="82" lean-forward="false" selection-start-line="165" selection-start-column="82" selection-end-line="165" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
