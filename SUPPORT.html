@@ -41,7 +41,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Lendos.ru</a>
+            <a class="navbar-brand" href="TEMPLATE.html">Lendos.ru</a>
         </div>
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,7 +58,7 @@
                     <i class="fa fa-user fa-fw"></i> Маха <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> Профиль</a>
+                    <li><a href="PROFILE.html"><i class="fa fa-user fa-fw"></i> Профиль</a>
                     <li class="divider"></li>
                     <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
                     </li>
@@ -105,24 +105,23 @@
                 <!-- name  -->
                 <div class="form-group">
                     <label>тема сообщения</label>
-                    <input type="text" class="form-control"
+                    <input required="required"
+                           type="text"
+                           class="form-control"
                            placeholder="ваш вопрос"
                             style="width: 40%">
                 </div>
                 <!-- second name  -->
                 <div class="form-group col-lg-5" style="position: relative; right: 15px;">
-                    <label >Ваше сообщение</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label>Ваше сообщение</label>
+                    <textarea required="required" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
 
                 <div style="clear: both"></div>
                 <p>также можете написать нам в <a href="#">группу VK</a></p>
 
-
                 <button type="submit" class="btn btn-success" style="margin-top: 10px;">Отправить</button>
             </form>
-
-
         </div>
     </div>
 
