@@ -189,6 +189,9 @@
                        href="#promoCode" aria-expanded="false"
                        aria-controls="promoCode">Промокод (если есть)</a>
                 </p>
+
+                <input id="hidden-price" type="hidden" name="price" value="350">
+
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="promoCode">
@@ -273,7 +276,8 @@
         }
 
         total += moduleCosts * checkBoxesSelected;
-         $("#costs").text('Полная стоимость: ' + total + ' рублей');
+        $("#costs").text('Полная стоимость: ' + total + ' рублей');
+        $("#hidden-price").val(total);
     }
 
 </script>
