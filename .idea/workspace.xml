@@ -20,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="231" column="10" lean-forward="true" selection-start-line="231" selection-start-column="10" selection-end-line="231" selection-end-column="10" />
+            <state relative-caret-position="154">
+              <caret line="377" column="67" lean-forward="false" selection-start-line="377" selection-start-column="67" selection-end-line="377" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#section#1;n#section#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#section#0;n#html#0;n#!!top" expanded="true" />
@@ -246,7 +246,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33521000" />
+    <option name="totallyTimeSpent" value="33819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="-4" width="1307" height="772" extended-state="6" />
@@ -686,8 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="231" column="10" lean-forward="true" selection-start-line="231" selection-start-column="10" selection-end-line="231" selection-end-column="10" />
+        <state relative-caret-position="154">
+          <caret line="377" column="67" lean-forward="false" selection-start-line="377" selection-start-column="67" selection-end-line="377" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#section#1;n#section#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#section#0;n#html#0;n#!!top" expanded="true" />
