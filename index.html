@@ -139,12 +139,10 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-
+                        <div id="port-1" class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-arrow-circle-right  fa-3x"></i>
                             </div>
-
                         </div>
                         <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
                     </a>
@@ -154,7 +152,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
+                        <div id="port-2" class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-arrow-circle-right fa-3x"></i>
                             </div>
@@ -167,20 +165,20 @@
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
+                        <div id="port-3" class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-arrow-circle-right fa-3x"></i>
                             </div>
                         </div>
                         <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
                     </a>
-                    <div class="portfolio-caption">
+                    <div id="5-port" class="portfolio-caption">
                         <a href="#" style="position: relative; bottom: 15px; color: #212529; font-size: 24px;">подробнее</a>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
+                        <div id="port-4" class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-arrow-circle-right fa-3x"></i>
                             </div>
@@ -193,7 +191,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
+                        <div id="port-5" class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-arrow-circle-right fa-3x"></i>
                             </div>
@@ -206,7 +204,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
+                        <div id="port-6" class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-arrow-circle-right fa-3x"></i>
                             </div>
@@ -218,6 +216,18 @@
                     </div>
                 </div>
             </div>
+
+            <div style="clear: both"></div>
+
+            <div class="row" style="position: relative; bottom: 45px;">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-2">
+                    <a href="#" class="btn btn-secondary btn-medium">
+                        <span class="network-name">Смотреть еще</span>
+                    </a>
+                </div>
+            </div>
+
         </section>
     </div>
 
@@ -430,6 +440,30 @@
             });
         }
 
+        // portfolio clicks
+        $("#port-1").click(function () {
+            alert("необхожим редирект на более детальный осмотр ;) 1");
+        });
+
+        $("#port-2").click(function () {
+            alert("необхожим редирект на более детальный осмотр ;) 2");
+        });
+
+        $("#port-3").click(function () {
+            alert("необхожим редирект на более детальный осмотр ;) 3");
+        });
+
+        $("#port-4").click(function () {
+            alert("необхожим редирект на более детальный осмотр ;) 4");
+        });
+
+        $("#port-5").click(function () {
+            alert("необхожим редирект на более детальный осмотр ;) 5");
+        });
+
+        $("#port-6").click(function () {
+            alert("необхожим редирект на более детальный осмотр ;) 6");
+        });
     </script>
 
 
