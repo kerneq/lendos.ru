@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Lendos.ru копируем и настраиваем лендинги</title>
+    <title>Lendos.me копируем и настраиваем лендинги</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#header">Lendos.ru</a>
+        <a class="navbar-brand" href="#header">Lendos.me</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -332,8 +332,8 @@
                         социальных сетей
                         </br>
                         <div align="center">
-                            <a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://165.227.116.214/TEMPLATE.php&response_type=code" style="margin-right: 5px"><img src="img/vk2.png" width="41"/></a>
-                            <a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://165.227.116.214/TEMPLATE.php&response_type=code&scope=public_profile,email" style="margin-left: 5px;"><img src="img/fb.png" width="41"/></a>
+                            <a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" style="margin-right: 5px"><img src="img/vk2.png" width="41"/></a>
+                            <a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code&scope=public_profile,email" style="margin-left: 5px;"><img src="img/fb.png" width="41"/></a>
                         </div>
                     </div>
                 </div>

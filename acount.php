@@ -6,14 +6,14 @@ if (!$_GET['code']) {
     exit('error code');
 }
 
-$token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=http://165.227.116.214/acount.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code='.$_GET['code']), true);
+$token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=https://lendos.me/acount.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code='.$_GET['code']), true);
 
 if (!$token){
-    $token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=261920790992777&redirect_uri=http://165.227.116.214/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code='.$_GET['code']), true);
+    $token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=261920790992777&redirect_uri=https://lendos.me/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code='.$_GET['code']), true);
     if (!$token){
         exit("error token");
     }
-    $data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=261920790992777&redirect_uri=http://165.227.116.214/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code='.$_GET['code'].'&access_token='.$token['access_token'].'&fields=id,name,email'), true);
+    $data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=261920790992777&redirect_uri=https://lendos.me/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code='.$_GET['code'].'&access_token='.$token['access_token'].'&fields=id,name,email'), true);
 
     if (!$data) {
         exit('error data');

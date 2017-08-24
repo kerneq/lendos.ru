@@ -5,7 +5,7 @@ if (!$_GET['code']) {
 }
 
 
-$token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=http://165.227.116.214/acount.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code='.$_GET['code']), true);
+$token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=https://lendos.me/acount.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code='.$_GET['code']), true);
 
 if (!$token) {
     exit('error token');

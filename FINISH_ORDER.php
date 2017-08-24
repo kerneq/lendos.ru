@@ -5,9 +5,9 @@ if (!isset($_SESSION['id'])){
     echo <<<_END
 <form>
     <pre>
-<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://165.227.116.214/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
+<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
 
-<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://165.227.116.214/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
+<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
     </pre>
 </form>
 _END;
