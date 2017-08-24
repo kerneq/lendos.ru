@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if (!isset($_SESSION['id'])){
+    echo 'Вы не авторизированный пользователь, пройдите по одной из сылок';
+    echo <<<_END
+<form>
+    <pre>
+<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
+
+<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
+    </pre>
+</form>
+_END;
+    die();
+
+}
+echo <<<_END
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -34,6 +50,10 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+_END;
+session_start();
+$name = $_SESSION['name'];
+echo <<<_END
 <body>
 
 <div id="wrapper">
@@ -41,7 +61,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="TEMPLATE.html">Lendos.ru</a>
+            <a class="navbar-brand" href="TEMPLATE.php">Lendos.ru</a>
         </div>
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,40 +75,68 @@
         <ul class="nav navbar-right navbar-top-links">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> Маха <b class="caret"></b>
+                    <i class="fa fa-user fa-fw"></i> $name <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="PROFILE.html"><i class="fa fa-user fa-fw"></i> Профиль</a>
+                    <li><a href="PROFILE.php"><i class="fa fa-user fa-fw"></i> Профиль</a>
                     <li class="divider"></li>
-                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
+                    <li><form action="TEMPLATE.php" method="POST" id='form2'>
+                            <input type="submit" value="Выйти" name ="exit" />
+                        </form>
                     </li>
                 </ul>
             </li>
         </ul>
+_END;
 
+if (isset($_POST['exit'])){
+    $bd->destroy_session_and_data();
+
+    header("Location: index.php");
+}
+
+echo <<<_END
         <!-- Sidebar -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
 
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="TEMPLATE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
+                        <a href="TEMPLATE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
                     </li>
                     <li>
-                        <a href="ORDERS.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
+                        <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
                     </li>
                     <li>
-                        <a href="PROFILE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
+                        <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
                     </li>
                     <li>
-                        <a href="SUPPORT.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
+                        <a href="SUPPORT.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
+_END;
 
+if (isset($_POST['send'])){
+    include_once 'authorisation/login.php';
+    include_once 'authorisation/DataBase.php';
+    $bd = new DataBase($hn,$un,$pw,$db);
+    $result = $bd->take_inf();
+    $result->data_seek(0);
+    $row = $result->fetch_array(MYSQLI_NUM);
+    $user_name = $row[2];
+    $user_email = $row[3];
+    $user_phone = $row[4];
+    $user_vk = $row[5];
+    $user_fb = $row[6];
+    include_once 'mail/contact_mail.php';
+    $sendm=new contact_mail($_SESSION['id'], $_POST['question'],$user_name, $user_email, $user_phone, $_POST['messege'], $user_vk, $user_fb);
+}
+
+echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
@@ -101,7 +149,7 @@
 
             <!-- ... Your content goes here ... -->
 
-            <form role="form" style="margin-bottom: 50px;">
+            <form role="form" style="margin-bottom: 50px;" method="POST" action="SUPPORT.php">
                 <!-- name  -->
                 <div class="form-group">
                     <label>тема сообщения</label>
@@ -109,18 +157,19 @@
                            type="text"
                            class="form-control"
                            placeholder="ваш вопрос"
-                            style="width: 40%">
+                            style="width: 40%"
+                            name="question">
                 </div>
                 <!-- second name  -->
                 <div class="form-group col-lg-5" style="position: relative; right: 15px;">
                     <label>Ваше сообщение</label>
-                    <textarea required="required" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea name="messege" required="required" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
 
                 <div style="clear: both"></div>
                 <p>также можете написать нам в <a href="#">группу VK</a></p>
 
-                <button type="submit" class="btn btn-success" style="margin-top: 10px;">Отправить</button>
+                <button type="submit" class="btn btn-success" style="margin-top: 10px;" name="send">Отправить</button>
             </form>
         </div>
     </div>
@@ -141,3 +190,5 @@
 
 </body>
 </html>
+_END;
+?>

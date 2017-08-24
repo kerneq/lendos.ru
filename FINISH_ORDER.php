@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if (!isset($_SESSION['id'])){
+    echo 'Вы не авторизированный пользователь, пройдите по одной из сылок';
+    echo <<<_END
+<form>
+    <pre>
+<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
+
+<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
+    </pre>
+</form>
+_END;
+    die();
+
+}
+echo <<<_END
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -34,6 +50,10 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+_END;
+session_start();
+$name = $_SESSION['name'];
+echo <<<_END
 <body>
 
 <div id="wrapper">
@@ -41,7 +61,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="TEMPLATE.html">Lendos.ru</a>
+            <a class="navbar-brand" href="TEMPLATE.php">Lendos.ru</a>
         </div>
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,40 +75,52 @@
         <ul class="nav navbar-right navbar-top-links">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> Маха <b class="caret"></b>
+                    <i class="fa fa-user fa-fw"></i> $name <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="PROFILE.html"><i class="fa fa-user fa-fw"></i> Профиль</a>
+                    <li><a href="PROFILE.php"><i class="fa fa-user fa-fw"></i> Профиль</a>
                     <li class="divider"></li>
-                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
+                    <li><form action="TEMPLATE.php" method="POST" id='form2'>
+                            <input type="submit" value="Выйти" name ="exit" />
+                        </form>
                     </li>
                 </ul>
             </li>
         </ul>
+_END;
 
+if (isset($_POST['exit'])){
+    $bd->destroy_session_and_data();
+
+    header("Location: index.php");
+}
+
+echo <<<_END
         <!-- Sidebar -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
 
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="TEMPLATE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
+                        <a href="TEMPLATE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
                     </li>
                     <li>
-                        <a href="ORDERS.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
+                        <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
                     </li>
                     <li>
-                        <a href="PROFILE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
+                        <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
                     </li>
                     <li>
-                        <a href="SUPPORT.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
+                        <a href="SUPPORT.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
+_END;
 
+echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
@@ -101,14 +133,15 @@
 
             <!-- ... Your content goes here ... -->
 
-            <form role="form" style="margin-bottom: 50px;">
+            <form role="form" style="margin-bottom: 50px;" method="post" action="FINISH_ORDER.php">
                 <!-- e-mail -->
                 <div class="form-group">
                     <label for="exampleInputEmail1">Ваш e-mail</label>
                     <input type="email" class="form-control"
                            id="exampleInputEmail1"
                            placeholder="iam@yandex.ru"
-                            style="width: 40%">
+                            style="width: 40%"
+                            name="email">
                 </div>
                 <!-- phone -->
                 <div class="form-group">
@@ -116,14 +149,15 @@
                     <input type="text" class="form-control"
                            id="exampleInputPhone"
                            placeholder="89092814332"
-                           style="width: 40%">
+                           style="width: 40%"
+                           name="phone">
                 </div>
 
                 <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
                 <b>К оплате: 600 рублей</b>
                 </br></br>
 
-                <button type="submit" class="btn btn-default">Оплатить</button>
+                <button type="submit" class="btn btn-default" name="pay">Оплатить</button>
             </form>
 
 
@@ -146,3 +180,5 @@
 
 </body>
 </html>
+_END;
+?>

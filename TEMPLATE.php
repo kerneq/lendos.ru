@@ -1,4 +1,62 @@
-<!DOCTYPE html>
+<?php
+
+include_once 'authorisation/DataBase.php';
+require_once 'authorisation/login.php';
+$bd =new DataBase($hn, $un, $pw, $db);
+if (!$_GET['code']) {
+    $bd->start_session();
+    if (!isset($_SESSION['id'])){
+        echo 'Вы не авторизированный пользователь, пройдите по одной из сылок';
+        echo <<<_END
+<form>
+    <pre>
+<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
+
+<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
+    </pre>
+</form>
+_END;
+        die();
+
+    }
+}
+else {
+
+    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code=' . $_GET['code']), true);
+
+    if (!$token) {
+        $token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code']), true);
+        if (!$token) {
+            exit("error token");
+        }
+        $data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code'] . '&access_token=' . $token['access_token'] . '&fields=id,name,email'), true);
+
+        if (!$data) {
+            exit('error data');
+        }
+
+
+    } else {
+        $data = json_decode(file_get_contents('https://api.vk.com/method/users.get?user_id=' . $token['user_id'] . '&access_token=' . $token['access_token'] . '&fields=uid,first_name,last_name,contacts,email'), true);
+
+        if (!$data) {
+            exit('error data');
+        }
+
+        $data = $data['response'][0];
+    }
+
+    $bd->user_add($data);
+//$bd->add_order('df', 'sfd', 'sfd', 'sfd', 'sfd', 'sfd', 'sfd', 'sfd');
+//$bd->out_orders();
+
+}
+
+
+
+
+
+echo <<<_END
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -34,6 +92,10 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+_END;
+$bd->start_session();
+$name = $_SESSION['name'];
+echo <<<_END
 <body>
 
 <div id="wrapper">
@@ -41,7 +103,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="TEMPLATE.html">Lendos.ru</a>
+            <a class="navbar-brand" href="TEMPLATE.php">Lendos.ru</a>
         </div>
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,40 +117,58 @@
         <ul class="nav navbar-right navbar-top-links">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> Маха <b class="caret"></b>
+                    <i class="fa fa-user fa-fw"></i>$name<b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="PROFILE.html"><i class="fa fa-user fa-fw"></i> Профиль</a>
+                    <li><a href="PROFILE.php"><i class="fa fa-user fa-fw"></i> Профиль</a>
                     <li class="divider"></li>
-                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
+                    <li>
+                    <form action="TEMPLATE.php" method="POST" id='form2'>
+                    <input type="submit" value="Выйти" name ="exit" />
+                    </form>
                     </li>
                 </ul>
             </li>
         </ul>
+_END;
 
+if (isset($_POST['exit'])){
+    $bd->destroy_session_and_data();
+
+    header("Location: index.php");
+}
+if (isset($_POST['end']))
+header("Location: FINISH_ORDER.php");
+echo <<<_END
         <!-- Sidebar -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
 
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="TEMPLATE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
+                        <a href="TEMPLATE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
                     </li>
                     <li>
-                        <a href="ORDERS.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
+                        <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
                     </li>
                     <li>
-                        <a href="PROFILE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
+                        <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
                     </li>
                     <li>
-                        <a href="SUPPORT.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
+                        <a href="SUPPORT.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
+_END;
 
+
+
+
+
+echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
@@ -101,14 +181,15 @@
 
             <!-- ... Your content goes here ... -->
 
-            <form role="form" style="margin-bottom: 50px;">
+            <form role="form" style="margin-bottom: 50px;" method="POST" action="TEMPLATE.php">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Адрес лендинга для копирования</label>
                     <input required="required"
                            type="text" class="form-control"
                            id="exampleInputEmail1"
                            placeholder="http://site.ru"
-                            style="width: 40%">
+                            style="width: 40%"
+                            name="url">
                 </div>
 
                 <p style="margin-top: 20px;">
@@ -125,7 +206,7 @@
                                     <label class="sr-only">vk-pixel</label>
                                     <div class="input-group col-lg-4 col-lg-offset-1" >
                                         <div class="input-group-addon"><img src="img/vk2.png" width="20" /></div>
-                                        <input id="pixel-vk" type="text" class="form-control" placeholder="VK-RTRG-102030-aBcDe">
+                                        <input id="pixel-vk" type="text" class="form-control" placeholder="VK-RTRG-102030-aBcDe" name="vk_pixel">
                                     </div>
                                 </div>
                                 <!-- fb -->
@@ -133,7 +214,7 @@
                                     <label class="sr-only">fb-pixel</label>
                                     <div class="input-group col-lg-4 col-lg-offset-1">
                                         <div class="input-group-addon"><img src="img/fb.png" width="20" /></div>
-                                        <input id="pixel-fb" type="text" class="form-control" placeholder="236621784242525">
+                                        <input id="pixel-fb" type="text" class="form-control" placeholder="236621784242525" name="fb_pixel">
                                     </div>
                                 </div>
                                 <!-- yandex metrika -->
@@ -141,7 +222,7 @@
                                     <label class="sr-only">metrika-pixel</label>
                                     <div class="input-group col-lg-4 col-lg-offset-1">
                                         <div class="input-group-addon"><img src="img/yandex.png" width="21" /></div>
-                                        <input id="pixel-metrika" type="text" class="form-control" placeholder="23662178">
+                                        <input id="pixel-metrika" type="text" class="form-control" placeholder="23662178" name="metka_pixel">
                                     </div>
                                 </div>
                             </div>
@@ -162,11 +243,11 @@
                                 <div class="col-sm-10 col-lg-offset-1">
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input id="vk-fast" class="form-check-input" type="checkbox"> Быстрые сообщения в группу ВК
+                                            <input id="vk-fast" class="form-check-input" type="checkbox" name="module1"> Быстрые сообщения в группу ВК
                                         </label>
                                         </br>
                                         <label class="form-check-label">
-                                            <input id="different" class="form-check-input" type="checkbox"> Другой (напишите об нем в форме ниже)
+                                            <input id="different" class="form-check-input" type="checkbox" name="modules2"> Другой (напишите об нем в форме ниже)
                                         </label>
                                     </div>
                                 </div>
@@ -178,20 +259,17 @@
                 <!-- text block -->
                 <div class="form-group col-lg-6" style="margin-top: 20px; position: relative; right: 15px;">
                     <label for="exampleFormControlTextarea1">Ваши индивидуальные требования, тексты</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="modules"></textarea>
                 </div>
 
                 <div style="clear: both"></div>
 
-                <!-- add promo code -->
+                <!-- add promo code 
                 <p>
                     <a class="btn btn-success" data-toggle="collapse"
                        href="#promoCode" aria-expanded="false"
                        aria-controls="promoCode">Промокод (если есть)</a>
                 </p>
-
-                <input id="hidden-price" type="hidden" name="price" value="350">
-
                 <div class="row">
                     <div class="col">
                         <div class="collapse multi-collapse" id="promoCode">
@@ -210,13 +288,14 @@
                         </div>
                     </div>
                 </div>
-
+-->
+<input id="hidden-price" type="hidden" name="price" value="350">
                 <!-- total costs -->
                 <div id="totalCosts">
                     <p id="costs" style="color: green; margin-top: 10px;">Полная стоимость: 350 рублей</p>
                 </div>
 
-                <button type="submit" class="btn btn-default" style="margin-top: 10px;">Закончить оформление</button>
+                <button type="submit" class="btn btn-default" style="margin-top: 10px;" name="end">Закончить оформление</button>
             </form>
 
 
@@ -276,11 +355,27 @@
         }
 
         total += moduleCosts * checkBoxesSelected;
-        $("#costs").text('Полная стоимость: ' + total + ' рублей');
-        $("#hidden-price").val(total);
+         $("#costs").text('Полная стоимость: ' + total + ' рублей');
+         $("#hidden-price").val(total);
     }
 
 </script>
 
 </body>
 </html>
+_END;
+
+if (isset($_POST['end'])){
+    $date_today = date("m.d.y"); //присвоено 03.12.01
+    $today[1] = date("H:i:s"); //присвоит 1 элементу массива 17:16:17
+    $date = $today[1].' / '.$date_today;
+    $bd->add_order($_POST['url'], $_POST['vk_pixel'],
+        $_POST['fb_pixel'],$_POST['metka_pixel'],
+        $date, $_POST['price'], $_POST['modules'],
+        $_POST['module1'].$_POST['module2']);
+
+
+
+}
+
+?>
