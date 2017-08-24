@@ -10,9 +10,9 @@ if (!$_GET['code']) {
         echo <<<_END
 <form>
     <pre>
-<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
+<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=http://165.227.116.214/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
 
-<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
+<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=http://165.227.116.214/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
     </pre>
 </form>
 _END;
@@ -22,14 +22,14 @@ _END;
 }
 else {
 
-    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code=' . $_GET['code']), true);
+    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=http://165.227.116.214/TEMPLATE.php&client_secret=ckVSU9iKn9VB7f3TFGEy&code=' . $_GET['code']), true);
 
     if (!$token) {
-        $token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/TEMPLATE.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code']), true);
+        $token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=261920790992777&redirect_uri=http://165.227.116.214/TEMPLATE.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code']), true);
         if (!$token) {
             exit("error token");
         }
-        $data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=261920790992777&redirect_uri=http://5426df90.ngrok.io/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code'] . '&access_token=' . $token['access_token'] . '&fields=id,name,email'), true);
+        $data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=261920790992777&redirect_uri=http://165.227.116.214/acount.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code'] . '&access_token=' . $token['access_token'] . '&fields=id,name,email'), true);
 
         if (!$data) {
             exit('error data');

@@ -5,13 +5,13 @@ if (!$_GET['code']) {
 
 
 
-$token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=808636295976597&redirect_uri=http://966bd571.ngrok.io/acount.php&client_secret=2c2a865ae628f3bb8bc69607b6fe1e3f&code='.$_GET['code']), true);
+$token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=808636295976597&redirect_uri=http://165.227.116.214/acount.php&client_secret=2c2a865ae628f3bb8bc69607b6fe1e3f&code='.$_GET['code']), true);
 
 if (!$token) {
     exit('error token');
 }
 
-$data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=808636295976597&redirect_uri=http://966bd571.ngrok.io/acount.php&client_secret=2c2a865ae628f3bb8bc69607b6fe1e3f&code='.$_GET['code'].'&access_token='.$token['access_token'].'&fields=id,name,email'), true);
+$data = json_decode(file_get_contents('https://graph.facebook.com/v2.9/me?client_id=808636295976597&redirect_uri=http://165.227.116.214/acount.php&client_secret=2c2a865ae628f3bb8bc69607b6fe1e3f&code='.$_GET['code'].'&access_token='.$token['access_token'].'&fields=id,name,email'), true);
 
 if (!$data) {
     exit('error data');
