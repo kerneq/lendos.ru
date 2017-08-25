@@ -9,11 +9,10 @@ if (!$_GET['code']) {
         echo 'Вы не авторизированный пользователь, пройдите по одной из сылок';
         echo <<<_END
 <form>
-    <pre>
-<a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" name="vk">Войти через ВК</a>
-
-<a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code&scope=public_profile,email" name="fb">Войти через FB</a>
-    </pre>
+    <div align="center">
+     <a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" style="margin-right: 5px" name="vk"><img src="img/vk2.png" width="41"/></a>
+     <a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code&scope=public_profile,email" style="margin-left: 5px;" name="fb"><img src="img/fb.png" width="41"/></a>
+    </div>
 </form>
 _END;
         die();
