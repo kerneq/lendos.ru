@@ -52,7 +52,7 @@ print "<html><script language=JavaScript ".
     "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
     "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
     "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-    "&Culture=$culture&Encoding=$encoding&IsTest=1'></script></html>";
+    "&Culture=$culture&Encoding=$encoding'></script></html>";
 
 
 ?>
