@@ -12,7 +12,7 @@
 // регистрационная информация (логин, пароль #1)
 // registration info (login, password #1)
 $mrh_login = "lendosme";
-$mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
+$mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
 // номер заказа
 // number of order
@@ -52,7 +52,7 @@ print "<html><script language=JavaScript ".
     "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
     "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
     "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-    "&Culture=$culture&Encoding=$encoding'></script></html>";
+    "&Culture=$culture&Encoding=$encoding&IsTest=1'></script></html>";
 
 
 ?>
