@@ -7,8 +7,6 @@ if (!$_GET['code']) {
     $bd->start_session();
     if (!isset($_SESSION['id'])){
         echo <<<_END
-        <div class="row" id="second-stap" style="display: none;">
-                <div class="col-lg-3"></div>
                 <div class="col-lg-6">
                     <div class="alert alert-info">
         Чтобы войти в систему Вам необходимо авторизоваться через одну из следующих социальных
@@ -20,7 +18,7 @@ if (!$_GET['code']) {
                         </div>
                     </div>
                 </div>
-            </div>
+          
 
 _END;
         die();
