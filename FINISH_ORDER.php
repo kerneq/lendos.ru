@@ -138,51 +138,42 @@ $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
 
-if (isset($_POST['pay'])){
-    $mrh_login = "lendosme";
-    $mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
+$mrh_login = "lendosme";
+$mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
 
 // номер заказа
 // number of order
-    $inv_id = 0;
+$inv_id = 0;
 
 // описание заказа
 // order description
-    $inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
+$inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
 
 // сумма заказа
 // sum of order
-    $out_summ = $row[7];
+$out_summ = $row[7];
 
 // тип товара
 // code of goods
-    $shp_item = 1;
+$shp_item = 1;
 
 // предлагаемая валюта платежа
 // default payment e-currency
-    $in_curr = "";
+$in_curr = "";
 
 // язык
 // language
-    $culture = "ru";
+$culture = "ru";
 
 // кодировка
 // encoding
-    $encoding = "utf-8";
+$encoding = "utf-8";
 
 // формирование подписи
 // generate signature
-    $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 
-// HTML-страница с кассой
-// ROBOKASSA HTML-page
-    print "<html><script language=JavaScript ".
-        "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
-        "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
-        "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-        "&Culture=$culture&Encoding=$encoding'></script></html>";
 
-}
 
 echo <<<_END
     <!-- Page Content -->
@@ -222,7 +213,7 @@ echo <<<_END
                 <b>К оплате: $row[7] рублей</b>
                 </br></br>
 
-                <button type="submit" class="btn btn-default" name="pay">Оплатить</button>
+                <button onClick='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=lendosme&OutSum=$row[7]&Description=Оплата услуги&SignatureValue=$crc"' type="submit" class="btn btn-default" name="pay">Оплатить</button>
             </form>
 
 
