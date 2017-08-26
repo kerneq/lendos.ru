@@ -171,7 +171,7 @@ $encoding = "utf-8";
 
 // формирование подписи
 // generate signature
-$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+$crc  = md5("$mrh_login:$out_summ:$mrh_pass1");
 
 
 
@@ -213,7 +213,7 @@ echo <<<_END
                 <b>К оплате: $row[7] рублей</b>
                 </br></br>
 
-                <button onClick='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=lendosme&OutSum=$row[7]&Description=Оплата услуги&SignatureValue=$crc"' type="submit" class="btn btn-default" name="pay">Оплатить</button>
+                <button onsubmit='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=lendosme&OutSum=$row[7]&Description=Оплата услуги&SignatureValue=$crc&IsTest=1"' type="submit" class="btn btn-default" name="pay">Оплатить</button>
             </form>
 
 
