@@ -213,7 +213,7 @@ echo <<<_END
                 <b>К оплате: $row[7] рублей</b>
                 </br></br>
 
-                <button onsubmit='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=lendosme&OutSum=$row[7]&Description=Оплата услуги&SignatureValue=$crc&IsTest=1"' type="submit" class="btn btn-default" name="pay">Оплатить</button>
+                <button onclick='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=lendosme&OutSum=$row[7]&Description=Оплата услуги&SignatureValue=$crc&IsTest=1"' type="submit" class="btn btn-default" name="pay">Оплатить</button>
             </form>
 
 
