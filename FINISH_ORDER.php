@@ -125,6 +125,16 @@ echo <<<_END
     </nav>
 _END;
 
+include_once 'authorisation/login.php';
+include_once 'authorisation/DataBase.php';
+$bd = new DataBase($hn,$un,$pw,$db);
+$result = $bd->take_inf();
+$result->data_seek(0);
+$row = $result->fetch_array(MYSQLI_NUM);
+$user_email = $row[3];
+$user_phone = $row[4];
+
+
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -144,7 +154,7 @@ echo <<<_END
                     <label for="exampleInputEmail1">Ваш e-mail</label>
                     <input type="email" class="form-control"
                            id="exampleInputEmail1"
-                           placeholder="iam@yandex.ru"
+                           placeholder="$user_email"
                             style="width: 40%"
                             name="email">
                 </div>
@@ -153,7 +163,7 @@ echo <<<_END
                     <label for="exampleInputEmail1">Ваш телефон (по желанию)</label>
                     <input type="text" class="form-control"
                            id="exampleInputPhone"
-                           placeholder="89092814332"
+                           placeholder="$user_phone"
                            style="width: 40%"
                            name="phone">
                 </div>
