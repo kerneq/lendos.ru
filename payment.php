@@ -16,7 +16,7 @@ $mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
 
 // номер заказа
 // number of order
-$inv_id = 0;
+
 
 // описание заказа
 // order description
@@ -24,11 +24,11 @@ $inv_desc = "Вы успешно оплатили свой заказ, во вк
 
 // сумма заказа
 // sum of order
-$out_summ = "8.96";
+$out_summ = "350";
 
 // тип товара
 // code of goods
-$shp_item = 1;
+
 
 // предлагаемая валюта платежа
 // default payment e-currency
@@ -44,15 +44,15 @@ $encoding = "utf-8";
 
 // формирование подписи
 // generate signature
-$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+$crc  = md5("$mrh_login:$out_summ:$mrh_pass1");
 
 // HTML-страница с кассой
 // ROBOKASSA HTML-page
 print "<html><script language=JavaScript ".
     "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
-    "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
-    "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-    "&Culture=$culture&Encoding=$encoding'></script></html>";
+    "MrchLogin=$mrh_login&OutSum=$out_summ".
+    "&Desc=$inv_desc&SignatureValue=$crc&IsTest=1'></script></html>";
+
 
 
 ?>
