@@ -133,6 +133,10 @@ $result->data_seek(0);
 $row = $result->fetch_array(MYSQLI_NUM);
 $user_email = $row[3];
 $user_phone = $row[4];
+$result = $bd->out_orders();
+$rows = $result->num_rows-1;
+$result->data_seek($rows);
+$row = $result->fetch_array(MYSQLI_NUM);
 
 
 echo <<<_END
@@ -156,7 +160,8 @@ echo <<<_END
                            id="exampleInputEmail1"
                            placeholder="$user_email"
                             style="width: 40%"
-                            name="email">
+                            name="email"
+                            required="required">
                 </div>
                 <!-- phone -->
                 <div class="form-group">
@@ -165,11 +170,12 @@ echo <<<_END
                            id="exampleInputPhone"
                            placeholder="$user_phone"
                            style="width: 40%"
-                           name="phone">
+                           name="phone"
+                           required="required">
                 </div>
 
                 <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
-                <b>К оплате: 600 рублей</b>
+                <b>К оплате: $row[7] рублей</b>
                 </br></br>
 
                 <button type="submit" class="btn btn-default" name="pay">Оплатить</button>

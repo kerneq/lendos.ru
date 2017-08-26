@@ -88,7 +88,7 @@ class DataBase
         $url_landing = $this->sanitizeMySQL($this->conn, $url_landing);
         $text = $this->sanitizeMySQL($this->conn, $text);
         $query ="INSERT INTO orders VALUES(NULL, '$id', '$url_landing', '$vk_pixel', 
-'$fb_pixel', '$metka_pixel', '$date', '$total_price', '$text', '$modules', 'в работе');";
+'$fb_pixel', '$metka_pixel', '$date', '$total_price', '$text', '$modules', 'в работе', 'not paid');";
         $result = $this->conn->query($query);
         if (!$result) die ("Database access failed: " . $this->conn->error);
         $result->close();

@@ -173,12 +173,13 @@ include_once 'authorisation/DataBase.php';
 $bd = new DataBase($hn, $un, $pw, $db);
 $result = $bd->out_orders();
 $rows = $result->num_rows;
+$num = 1;
 for ($j = 0 ; $j < $rows ; ++$j)
 {
     $result->data_seek($j);
     $row = $result->fetch_array(MYSQLI_NUM);
-    $num = $j+1;
-    echo <<<_END
+    if ($row[11]==='paid') {
+        echo <<<_END
                     <tr>
                         <th scope="row">$num</th>
                         <td>$row[2]</td>
@@ -190,6 +191,8 @@ for ($j = 0 ; $j < $rows ; ++$j)
                         <td>$row[7]</td>
                     </tr>
 _END;
+        $num++;
+    }
 
 }
 $result->close();
