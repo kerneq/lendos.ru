@@ -139,7 +139,7 @@ $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
 
 $mrh_login = "lendosme";
-$mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
+$mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
 // номер заказа
 // number of order
