@@ -100,31 +100,6 @@ if (isset($_POST['exit'])){
     header("Location: index.php");
 }
 
-echo <<<_END
-        <!-- Sidebar -->
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-
-                <ul class="nav" id="side-menu">
-                    <li>
-                        <a href="TEMPLATE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
-                    </li>
-                    <li>
-                        <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
-                    </li>
-                    <li>
-                        <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
-                    </li>
-                    <li>
-                        <a href="SUPPORT.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </nav>
-_END;
-
 include_once 'authorisation/login.php';
 include_once 'authorisation/DataBase.php';
 $bd = new DataBase($hn,$un,$pw,$db);
@@ -174,9 +149,36 @@ if (isset($_POST['pay'])){
 // формирование подписи
 // generate signature
     $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
-header("Location ../index.php");
+    header("Location /index.php");
     //header("Location: https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1");
 }
+
+
+echo <<<_END
+        <!-- Sidebar -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="TEMPLATE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
+                    </li>
+                    <li>
+                        <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
+                    </li>
+                    <li>
+                        <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
+                    </li>
+                    <li>
+                        <a href="SUPPORT.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+_END;
+
 
 
 echo <<<_END
