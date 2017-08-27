@@ -194,31 +194,7 @@ echo <<<_END
 
             <!-- ... Your content goes here ... -->
 
-            <form role="form" style="margin-bottom: 50px;" method="post" action="FINISH_ORDER.php">
-                <!-- e-mail -->
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Ваш e-mail</label>
-                    <input type="email" class="form-control"
-                           id="exampleInputEmail1"
-                           placeholder="$user_email"
-                            style="width: 40%"
-                            name="email"
-                            required="required">
-                </div>
-                <!-- phone -->
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Ваш телефон (по желанию)</label>
-                    <input type="text" class="form-control"
-                           id="exampleInputPhone"
-                           placeholder="$user_phone"
-                           style="width: 40%"
-                           name="phone">
-                </div>
-
-                <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
-                <b>К оплате: $row[7] рублей</b>
-                </br></br>
-</form>
+           
 _END;
 
 
