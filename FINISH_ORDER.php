@@ -219,7 +219,7 @@ echo <<<_END
                 <b>К оплате: $row[7] рублей</b>
                 </br></br>
 
-                <button type="submit" class="btn btn-default" name="pay" onClick='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1"'>Оплатить</button>
+                <button type="submit" class="btn btn-default" name="pay" onClick='location.href="https://auth.robokassa.ru/"'>Оплатить</button>
             </form>
 
 
