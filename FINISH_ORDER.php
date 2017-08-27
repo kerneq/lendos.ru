@@ -115,7 +115,7 @@ $row = $result->fetch_array(MYSQLI_NUM);
 
 if (isset($_POST['pay'])){
     $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
-    $mrh_login = "lendosme";
+    /*$mrh_login = "lendosme";
     $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
 // номер заказа
@@ -148,7 +148,7 @@ if (isset($_POST['pay'])){
 
 // формирование подписи
 // generate signature
-    $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+    $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");*/
     header("Location /index.php");
     //header("Location: https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1");
 }
