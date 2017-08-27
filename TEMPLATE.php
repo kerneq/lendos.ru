@@ -13,7 +13,7 @@ if (!$_GET['code']) {
 сетей
         </br>
                         <div align="center">
-                            <a href="https://oauth.vk.com/authorize?client_id=6156122&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" style="margin-right: 5px" name="vk"><img src="img/vk2.png" width="41"/></a>
+                            <a href="https://oauth.vk.com/authorize?client_id=6163804&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" style="margin-right: 5px" name="vk"><img src="img/vk2.png" width="41"/></a>
                             <a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code&scope=public_profile,email" style="margin-left: 5px;" name="fb"><img src="img/fb.png" width="41"/></a>
                         </div>
                     </div>
@@ -27,7 +27,7 @@ _END;
 }
 else {
 
-    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6156122&redirect_uri=https://lendos.me/TEMPLATE.php&client_secret=qKkiAczRiWfPJAaDwCSl&code=' . $_GET['code']), true);
+    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6163804&redirect_uri=https://lendos.me/TEMPLATE.php&client_secret=yucaFtiTYOOj9hBsrHrI&code=' . $_GET['code']), true);
 
     if (!$token) {
         $token = json_decode(file_get_contents('https://graph.facebook.com/v2.9/oauth/access_token?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&client_secret=4f16c767c37c3383d7d1861deb7ff007&code=' . $_GET['code']), true);
