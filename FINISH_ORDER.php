@@ -138,41 +138,47 @@ $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
 
-$mrh_login = "lendosme";
-$mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
+if (isset($_POST['pay'])){
+    $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
+    $mrh_login = "lendosme";
+    $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
 // номер заказа
 // number of order
-$inv_id = 0;
+    $inv_id = $row[0];
 
 // описание заказа
 // order description
-$inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
+    $inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
 
 // сумма заказа
 // sum of order
-$out_summ = $row[7];
+    $out_summ = $row[7];
 
 // тип товара
 // code of goods
-$shp_item = 1;
+    $shp_item = 1;
 
 // предлагаемая валюта платежа
 // default payment e-currency
-$in_curr = "";
+    $in_curr = "";
 
 // язык
 // language
-$culture = "ru";
+    $culture = "ru";
 
 // кодировка
 // encoding
-$encoding = "utf-8";
+    $encoding = "utf-8";
 
 // формирование подписи
 // generate signature
-$crc  = md5("$mrh_login:$out_summ:$mrh_pass1");
+    $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 
+    header("Location: https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?
+        MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr
+        &Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1");
+}
 
 
 echo <<<_END
@@ -213,7 +219,7 @@ echo <<<_END
                 <b>К оплате: $row[7] рублей</b>
                 </br></br>
 
-                <button onclick='location.href="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=lendosme&OutSum=$row[7]&Description=Оплата услуги&SignatureValue=$crc&IsTest=1"' type="submit" class="btn btn-default" name="pay">Оплатить</button>
+                <button type="submit" class="btn btn-default" name="pay">Оплатить</button>
             </form>
 
 

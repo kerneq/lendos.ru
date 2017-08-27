@@ -48,11 +48,11 @@ $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 
 // HTML-страница с кассой
 // ROBOKASSA HTML-page
-print "<html><script language=JavaScript ".
+/*print "<html><script language=JavaScript ".
     "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
     "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
     "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
     "&Culture=$culture&Encoding=$encoding&IsTest=1'></script></html>";
-
+*/
 
 ?>
