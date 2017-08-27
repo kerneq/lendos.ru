@@ -139,7 +139,7 @@ $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
 
-// $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
+$bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
 $mrh_login = "lendosme";
 //password1
 $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
@@ -184,7 +184,8 @@ echo <<<_END
                            id="exampleInputEmail1"
                            placeholder="$user_email"
                             style="width: 40%"
-                            name="email">
+                            name="email"
+                            required="required">
                 </div>
                 <!-- phone -->
                 <div class="form-group">
