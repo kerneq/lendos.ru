@@ -138,8 +138,8 @@ $result = $bd->out_orders();
 $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
-if (isset($_POST['pay']))
-//$bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
+if (isset($_POST['email']))
+$bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
 $mrh_login = "lendosme";
 //password1
 $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
