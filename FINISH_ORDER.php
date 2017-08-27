@@ -113,8 +113,8 @@ $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
 
-if (isset($_POST['pay'])){
-    $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
+
+   // $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
     $mrh_login = "lendosme";
     $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
@@ -150,8 +150,8 @@ if (isset($_POST['pay'])){
 // generate signature
     $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
     //header("Location: ../TEMPLATE.php");
-    file_get_contents("https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1");
-}
+    //file_get_contents("https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1");
+
 
 
 echo <<<_END
@@ -218,8 +218,17 @@ echo <<<_END
                 <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
                 <b>К оплате: $row[7] рублей</b>
                 </br></br>
+_END;
 
-                <button type="submit" class="btn btn-default" name="pay" onClick='location.href="https://auth.robokassa.ru/"'>Оплатить</button>
+
+print "<html><script language=JavaScript ".
+    "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
+    "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
+    "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
+    "&Culture=$culture&Encoding=$encoding&IsTest=1'></script></html>";
+
+echo <<<_END
+      
             </form>
 
 
