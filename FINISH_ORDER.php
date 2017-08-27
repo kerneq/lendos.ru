@@ -233,7 +233,7 @@ print "<html>".
     "<input type=hidden name=Culture value=$culture>".
     "<input type=submit value='Pay'>".
     "</form></html>";
-?>
+
 
 echo <<<_END
       
