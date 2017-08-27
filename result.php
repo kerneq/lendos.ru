@@ -14,7 +14,8 @@ $mrh_pass2 = "q15CS1uno4Mw9RFUmHkl";
 //current date
 $tm=getdate(time()+9*3600);
 $date="$tm[year]-$tm[mon]-$tm[mday] $tm[hours]:$tm[minutes]:$tm[seconds]";
-
+session_start();
+$_SESSION['we'] = $_REQUEST["InvId"];
 // чтение параметров
 // read parameters
 $out_summ = $_REQUEST["OutSum"];

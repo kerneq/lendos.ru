@@ -175,7 +175,7 @@ echo <<<_END
             </div>
 
             <!-- ... Your content goes here ... -->
-           
+           <form id="form1" action="FINISH_ORDER.php" method="post"></form>
     <form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
         <!-- e-mail -->
                 <div class="form-group">
@@ -185,7 +185,8 @@ echo <<<_END
                            placeholder="$user_email"
                             style="width: 40%"
                             name="email"
-                            required="required">
+                            required="required"
+                            form="form1">
                 </div>
                 <!-- phone -->
                 <div class="form-group">

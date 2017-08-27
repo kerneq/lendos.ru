@@ -11,6 +11,8 @@
 
 // регистрационная информация (логин, пароль #1)
 // registration info (login, password #1)
+session_start();
+echo $_SESSION['we'];
 $mrh_login = "lendosme";
 $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
