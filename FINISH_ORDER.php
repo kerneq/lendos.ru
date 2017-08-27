@@ -100,59 +100,6 @@ if (isset($_POST['exit'])){
     header("Location: index.php");
 }
 
-include_once 'authorisation/login.php';
-include_once 'authorisation/DataBase.php';
-$bd = new DataBase($hn,$un,$pw,$db);
-$result = $bd->take_inf();
-$result->data_seek(0);
-$row = $result->fetch_array(MYSQLI_NUM);
-$user_email = $row[3];
-$user_phone = $row[4];
-$result = $bd->out_orders();
-$rows = $result->num_rows-1;
-$result->data_seek($rows);
-$row = $result->fetch_array(MYSQLI_NUM);
-
-
-   // $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
-    $mrh_login = "lendosme";
-    $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
-
-// номер заказа
-// number of order
-    $inv_id = $row[0];
-
-// описание заказа
-// order description
-    $inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
-
-// сумма заказа
-// sum of order
-    $out_summ = $row[7];
-
-// тип товара
-// code of goods
-    $shp_item = 1;
-
-// предлагаемая валюта платежа
-// default payment e-currency
-    $in_curr = "";
-
-// язык
-// language
-    $culture = "ru";
-
-// кодировка
-// encoding
-    $encoding = "utf-8";
-
-// формирование подписи
-// generate signature
-    $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
-    //header("Location: ../TEMPLATE.php");
-    //file_get_contents("https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item&Culture=$culture&Encoding=$encoding&IsTest=1");
-
-
 
 echo <<<_END
         <!-- Sidebar -->
@@ -179,6 +126,41 @@ echo <<<_END
     </nav>
 _END;
 
+include_once 'authorisation/login.php';
+include_once 'authorisation/DataBase.php';
+$bd = new DataBase($hn,$un,$pw,$db);
+$result = $bd->take_inf();
+$result->data_seek(0);
+$row = $result->fetch_array(MYSQLI_NUM);
+$user_email = $row[3];
+$user_phone = $row[4];
+$result = $bd->out_orders();
+$rows = $result->num_rows-1;
+$result->data_seek($rows);
+$row = $result->fetch_array(MYSQLI_NUM);
+
+// $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
+$mrh_login = "lendosme";
+//password1
+$mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
+// number of order
+$inv_id = $row[0];
+// order description
+$inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
+// sum of order
+$out_summ = $row[7];
+// code of goods
+$shp_item = 1;
+// default payment e-currency
+$in_curr = "";
+// language
+$culture = "ru";
+// encoding
+$encoding = "utf-8";
+// generate signature
+$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+//parameter for testing 1 - test 0 - not test
+$IsTest=1;
 
 
 echo <<<_END
@@ -193,13 +175,30 @@ echo <<<_END
             </div>
 
             <!-- ... Your content goes here ... -->
-
            
-_END;
-
-
-echo <<<_END
     <form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
+        <!-- e-mail -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Ваш e-mail</label>
+                    <input type="email" class="form-control"
+                           id="exampleInputEmail1"
+                           placeholder="$user_email"
+                            style="width: 40%"
+                            name="email">
+                </div>
+                <!-- phone -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Ваш телефон (по желанию)</label>
+                    <input type="text" class="form-control"
+                           id="exampleInputPhone"
+                           placeholder="$user_phone"
+                           style="width: 40%"
+                           name="phone">
+                </div>
+
+                <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
+                <b>К оплате: $row[7] рублей</b>
+                </br></br>
     <input type=hidden name=MrchLogin value=$mrh_login>
     <input type=hidden name=OutSum value=$out_summ>
     <input type=hidden name=InvId value=$inv_id>
@@ -208,16 +207,9 @@ echo <<<_END
     <input type=hidden name=Shp_item value='$shp_item'>
     <input type=hidden name=IncCurrLabel value=$in_curr>
     <input type=hidden name=Culture value=$culture>
-    <input type=hidden name=IsTest value=1>
+    <input type=hidden name=IsTest value=$IsTest>
     <input type=submit value='Оплата'>
     </form>
-_END;
-
-echo <<<_END
-      
-         
-
-
         </div>
     </div>
 
