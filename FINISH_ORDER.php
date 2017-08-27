@@ -221,11 +221,19 @@ echo <<<_END
 _END;
 
 
-print "<html><script language=JavaScript ".
-    "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
-    "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
-    "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-    "&Culture=$culture&Encoding=$encoding&IsTest=1'></script></html>";
+print "<html>".
+    "<form action='https://merchant.roboxchange.com/Index.aspx' method=POST>".
+    "<input type=hidden name=MrchLogin value=$mrh_login>".
+    "<input type=hidden name=OutSum value=$out_summ>".
+    "<input type=hidden name=InvId value=$inv_id>".
+    "<input type=hidden name=Desc value='$inv_desc'>".
+    "<input type=hidden name=SignatureValue value=$crc>".
+    "<input type=hidden name=Shp_item value='$shp_item'>".
+    "<input type=hidden name=IncCurrLabel value=$in_curr>".
+    "<input type=hidden name=Culture value=$culture>".
+    "<input type=submit value='Pay'>".
+    "</form></html>";
+?>
 
 echo <<<_END
       
