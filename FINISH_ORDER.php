@@ -138,7 +138,7 @@ $result = $bd->out_orders();
 $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
-
+if (isset($_POST['pay']))
 $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
 $mrh_login = "lendosme";
 //password1
@@ -209,7 +209,7 @@ echo <<<_END
     <input type=hidden name=IncCurrLabel value=$in_curr>
     <input type=hidden name=Culture value=$culture>
     <input type=hidden name=IsTest value=$IsTest>
-    <input type=submit value='Оплата'>
+    <input type=submit value='Оплата' name="pay">
     </form>
         </div>
     </div>
