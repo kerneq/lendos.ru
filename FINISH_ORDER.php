@@ -166,7 +166,7 @@ $out_summ = $row[7];
 // code of goods
 $shp_item = 1;
 // default payment e-currency
-$in_curr = "";
+$in_curr = "USD";
 // language
 $culture = "ru";
 // encoding
@@ -175,7 +175,8 @@ $encoding = "utf-8";
 $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 //parameter for testing 1 - test 0 - not test
 $IsTest=1;
-
+//method of payment without % we pay %
+$new_sum = file_get_contents('https://auth.robokassa.ru/Merchant/WebService/Service.asmx/CalcOutSumm?MerchantLogin='.$mrh_login.'&IncCurrLabel='.$in_curr.'&IncSum='.$out_summ);
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -197,7 +198,7 @@ echo <<<_END
                            id="exampleInputEmail1"
                            placeholder="$user_email"
                             style="width: 40%"
-                            name="email"
+                            name="Email"
                             required="required"
                             >
                 </div>
@@ -217,7 +218,7 @@ echo <<<_END
                 <b>К оплате: $out_summ рублей</b>
                 </br></br>
                 <input type=hidden name=MrchLogin value=$mrh_login>
-                <input type=hidden name=OutSum value=$out_summ>
+                <input type=hidden name=OutSum value=$new_sum>
                 <input type=hidden name=InvId value=$inv_id>
                 <input type=hidden name=Desc value='$inv_desc'>
                 <input type=hidden name=SignatureValue value=$crc>
