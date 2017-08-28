@@ -178,7 +178,7 @@ _END;
  * get orders from table 'orders'
  * if status is 'paid'
  */
-include_once 'authorisation/login.php';
+require_once 'authorisation/login.php';
 include_once 'authorisation/DataBase.php';
 $bd = new DataBase($hn, $un, $pw, $db);
 //get all orders of current user

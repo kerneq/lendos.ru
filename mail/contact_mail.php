@@ -11,7 +11,13 @@
  */
 class contact_mail
 {
-    public function __construct($id, $question, $name, $email_address, $phone, $message, $vk, $fb)
+    /*
+     * if $num_order=NULL
+     * for success.php
+     * else
+     * for SUPPORT.php
+     */
+    public function __construct($id, $question, $name, $email_address, $phone, $message, $vk, $fb, $num_order,$hn,$un,$pw,$db)
     {
         $question = strip_tags(htmlspecialchars($question));
 
@@ -29,9 +35,34 @@ class contact_mail
         \nEmail: $email_address\n
         \nPhone: $phone\n
         \nVK: $vk\n
-        \nFACEBOOK: $fb\n
-        \nQuestion: $question\n
+        \nFACEBOOK: $fb\n";
+        //for SUPPORT.php
+        $support= "\nQuestion: $question\n
         \nMessage:\n$message";
+
+        if ($num_order!=NULL){
+            //for success.php
+            include_once '../authorisation/DataBase.php';
+            $bd=new DataBase($hn,$un,$pw,$db);
+            //get order of special number
+            $result = $bd->get_order($num_order);
+            $result->data_seek(0);
+            $row = $result->fetch_array(MYSQLI_NUM);
+            $order_ifa ="\nNumber of order: $row[0]\n
+            \nUrl_landing: $row[2]\n  
+            \nVK_pixel: $row[3]\n
+            \nFB_pixel: $row[4]\n
+            \nMETKA_pixel: $row[5]\n
+            \nDate: $row[6]\n
+            \nPrice: $row[7]\n  
+            \nText: $row[8]\n
+            \nModules: $row[9]\n
+            \nUrl_download: $row[10]\n
+            \nStatus:\n$row[11]\n";
+            $email_body.=$order_ifa;
+        } else {
+            $email_body.=$support;
+        }
         // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com
         $headers = "From: noreply@localhost.com\n";
         $headers .= "Reply-To: $email_address";

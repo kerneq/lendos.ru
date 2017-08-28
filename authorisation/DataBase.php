@@ -124,6 +124,16 @@ class DataBase
     }
 
     /*
+     * return an order of special number
+     */
+    function get_order($number){
+        $query = "SELECT * FROM orders WHERE number='$number'";
+        $result = $this->conn->query($query);
+        if (!$result) die ("Database access failed: " . $this->conn->error);
+        return $result;
+    }
+
+    /*
      * checking is current user in table users
      * return true if is else false
      */

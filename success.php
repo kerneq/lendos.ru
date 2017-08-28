@@ -29,8 +29,19 @@ if ($my_crc != $crc)
      */
     include_once 'authorisation/login.php';
     include_once 'authorisation/DataBase.php';
+    include_once 'mail/contact_mail.php';
     $bd = new DataBase($hn,$un,$pw,$db);
     $bd->paid_order($inv_id);
+    $result = $bd->take_inf();
+    $result->data_seek(0);
+    $row = $result->fetch_array(MYSQLI_NUM);
+    $user_name = $row[2];
+    $user_email = $row[3];
+    $user_phone = $row[4];
+    $user_vk = $row[5];
+    $user_fb = $row[6];
+    new contact_mail($_SESSION['id'], NULL,$user_name, $user_email, $user_phone, NULL, $user_vk, $user_fb, $inv_id,$hn,$un,$pw,$db);
+
 }
 /*
 // check of number of the order info in history of operations

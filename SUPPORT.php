@@ -151,7 +151,7 @@ if (isset($_POST['send'])){
     $user_fb = $row[6];
     //send qustion to us from current user
     include_once 'mail/contact_mail.php';
-    $sendm=new contact_mail($_SESSION['id'], $_POST['question'],$user_name, $user_email, $user_phone, $_POST['messege'], $user_vk, $user_fb);
+    $sendm=new contact_mail($_SESSION['id'], $_POST['question'],$user_name, $user_email, $user_phone, $_POST['messege'], $user_vk, $user_fb, NULL,$hn,$un,$pw,$db);
 }
 
 echo <<<_END
