@@ -176,7 +176,10 @@ $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 //parameter for testing 1 - test 0 - not test
 $IsTest=1;
 //method of payment without % we pay %
-$new_sum = file_get_contents('https://auth.robokassa.ru/Merchant/WebService/Service.asmx/CalcOutSumm?MerchantLogin='.$mrh_login.'&IncCurrLabel='.$in_curr.'&IncSum='.$out_summ);
+$new_sum = json_decode(file_get_contents('https://auth.robokassa.ru/Merchant/WebService/Service.asmx/CalcOutSumm?MerchantLogin='.$mrh_login.'&IncCurrLabel='.$in_curr.'&IncSum='.$out_summ));
+echo '<pre>';
+var_dump($new_sum);
+echo '</pre>';
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
