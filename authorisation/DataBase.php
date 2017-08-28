@@ -85,6 +85,16 @@ class DataBase
     }
 
     /*
+     * update order of current use
+     * change status not paid on paid
+     */
+    function paid_order($num_order){
+        $query = "UPDATE orders SET status='paid' WHERE number='$num_order'";
+        $result = $this->conn->query($query);
+        if (!$result) die ("Database access failed: " . $this->conn->error);
+    }
+
+    /*
      * add date to table 'orders' of current user
      * column url_download is 'в работе'
      * column status is 'not paid'

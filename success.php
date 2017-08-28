@@ -23,8 +23,16 @@ if ($my_crc != $crc)
 {
     echo "bad sign\n";
     exit();
+} else {
+    /*
+     * change status in order on 'paid'
+     */
+    include_once 'authorisation/login.php';
+    include_once 'authorisation/DataBase.php';
+    $bd = new DataBase($hn,$un,$pw,$db);
+    $bd->paid_order($inv_id);
 }
-
+/*
 // check of number of the order info in history of operations
 $f=@fopen("order.txt","r+") or die("error");
 
@@ -40,6 +48,6 @@ while(!feof($f))
     }
 }
 fclose($f);
-
+*/
 ?>
 
