@@ -13,6 +13,7 @@
 // registration info (login, password #1)
 session_start();
 echo $_SESSION['we'];
+$_SESSION['we']="die";
 $mrh_login = "lendosme";
 $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
