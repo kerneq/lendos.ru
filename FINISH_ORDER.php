@@ -166,7 +166,7 @@ $out_summ = $row[7];
 // code of goods
 $shp_item = 1;
 // default payment e-currency
-$in_curr = "USD";
+$in_curr = "";
 // language
 $culture = "ru";
 // encoding
