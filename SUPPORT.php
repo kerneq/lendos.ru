@@ -1,4 +1,5 @@
 <?php
+//check if user has already auth
 session_start();
 if (!isset($_SESSION['id'])){
     echo <<<_END
@@ -19,6 +20,7 @@ _END;
     die();
 
 }
+
 echo <<<_END
 <html lang="en">
 <head>
@@ -56,8 +58,12 @@ echo <<<_END
     <![endif]-->
 </head>
 _END;
+/*
+ * get current name of user
+ */
 session_start();
 $name = $_SESSION['name'];
+
 echo <<<_END
 <body>
 
@@ -94,6 +100,9 @@ echo <<<_END
         </ul>
 _END;
 
+/*
+ * if button 'exit' clicked
+ */
 if (isset($_POST['exit'])){
     $bd->destroy_session_and_data();
 
@@ -124,11 +133,14 @@ echo <<<_END
         </div>
     </nav>
 _END;
-
+/*
+ * if button 'send' clicked
+ */
 if (isset($_POST['send'])){
     include_once 'authorisation/login.php';
     include_once 'authorisation/DataBase.php';
     $bd = new DataBase($hn,$un,$pw,$db);
+    //get data of currenr user from table 'users'
     $result = $bd->take_inf();
     $result->data_seek(0);
     $row = $result->fetch_array(MYSQLI_NUM);
@@ -137,6 +149,7 @@ if (isset($_POST['send'])){
     $user_phone = $row[4];
     $user_vk = $row[5];
     $user_fb = $row[6];
+    //send qustion to us from current user
     include_once 'mail/contact_mail.php';
     $sendm=new contact_mail($_SESSION['id'], $_POST['question'],$user_name, $user_email, $user_phone, $_POST['messege'], $user_vk, $user_fb);
 }
@@ -196,4 +209,5 @@ echo <<<_END
 </body>
 </html>
 _END;
+
 ?>

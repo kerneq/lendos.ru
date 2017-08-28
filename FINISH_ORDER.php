@@ -1,4 +1,5 @@
 <?php
+//check if user has already auth
 session_start();
 if (!isset($_SESSION['id'])){
     echo <<<_END
@@ -19,6 +20,7 @@ _END;
     die();
 
 }
+
 echo <<<_END
 <html lang="en">
 <head>
@@ -56,8 +58,12 @@ echo <<<_END
     <![endif]-->
 </head>
 _END;
+/*
+ * get current name of user
+ */
 session_start();
 $name = $_SESSION['name'];
+
 echo <<<_END
 <body>
 
@@ -93,13 +99,14 @@ echo <<<_END
             </li>
         </ul>
 _END;
-
+/*
+ * if button 'exit' clicked
+ */
 if (isset($_POST['exit'])){
     $bd->destroy_session_and_data();
 
     header("Location: index.php");
 }
-
 
 echo <<<_END
         <!-- Sidebar -->
@@ -232,4 +239,5 @@ echo <<<_END
 </body>
 </html>
 _END;
+
 ?>

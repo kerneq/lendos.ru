@@ -9,6 +9,7 @@
 class DataBase
 {
     private $conn='';
+
     /*
      * connect to bd
      */
@@ -16,6 +17,7 @@ class DataBase
         $this->conn = new mysqli($hn, $un, $pw, $db);
         if ($this->conn->connect_error) die($this->conn->connect_error);
     }
+
     /*
      * adding new user to bd
      */
@@ -35,15 +37,18 @@ class DataBase
             $name = $data['name'];
             $email = $data['email'];
         }
+        //add id and name of user to sesstion
         $this->add_session($id, $name);
         if (!$this->user_is($id)) {
             $query ="INSERT INTO users VALUES(NULL, '$id', '$name', '$email', '$phone', NULL, NULL);";
             $result = $this->conn->query($query);
             if (!$result) die ("Database access failed: " . $this->conn->error);
-            //$result->close();
         }
     }
 
+    /*
+     * update date of current user
+     */
     function update($name, $email, $phone, $vk, $fb){
         $name = $this->sanitizeMySQL($this->conn, $name);
         $email = $this->sanitizeMySQL($this->conn, $email);
@@ -77,11 +82,13 @@ class DataBase
             $result = $this->conn->query($query);
             if (!$result) die ("Database access failed: " . $this->conn->error);
         }
-
-
-
     }
 
+    /*
+     * add date to table 'orders' of current user
+     * column url_download is 'в работе'
+     * column status is 'not paid'
+     */
     function add_order($url_landing, $vk_pixel, $fb_pixel, $metka_pixel, $date, $total_price, $text, $modules){
         $this->start_session();
         $id = $_SESSION['id'];
@@ -92,9 +99,11 @@ class DataBase
         $result = $this->conn->query($query);
         if (!$result) die ("Database access failed: " . $this->conn->error);
         $result->close();
-
     }
 
+    /*
+     * return all orders of current user
+     */
     function out_orders(){
         $this->start_session();
         $id = $_SESSION['id'];
@@ -104,9 +113,9 @@ class DataBase
         return $result;
     }
 
-
     /*
-     * checking is user in bd
+     * checking is current user in table users
+     * return true if is else false
      */
     function user_is($id){
         $query ="SELECT EXISTS(SELECT id FROM users WHERE id = '$id')";
@@ -120,9 +129,11 @@ class DataBase
             $result->close();
             return false;
         }
-
     }
 
+    /*
+     * if user is in system
+     */
     function is_authorisation(){
         $this->start_session();
         if (isset($_SESSION['id'])){
@@ -130,19 +141,20 @@ class DataBase
         }
     }
 
+    /*
+     * add session of current user
+     * name and id are in session
+     */
     function add_session($id, $name){
-
         //$this->destroy_session_and_data();
         $this->start_session();
         $_SESSION['id'] = $id;
         $_SESSION['name'] = $name;
-
-
-
-
-
     }
 
+    /*
+     * return data of current user from the table 'users'
+     */
     function take_inf(){
         $this->start_session();
         $id = $_SESSION['id'];
@@ -151,7 +163,6 @@ class DataBase
         if (!$result) die ("Database access failed: " . $this->conn->error);
         return $result;
     }
-
 
     /*
      * hash safety
@@ -168,7 +179,9 @@ class DataBase
         setcookie(session_name(), '', time() - 2592000, '/');
         session_destroy();
     }
-
+    /*
+     * start sesseion with more safety
+     */
     function start_session(){
         session_start();
         if (!isset($_SESSION['initiated']))
@@ -179,25 +192,14 @@ class DataBase
         if (!isset($_SESSION['count'])) $_SESSION['count'] = 0;
         else ++$_SESSION['count'];
     }
-
-
+    /*
+     * if someone use id of our users
+     * now dont use this function
+     */
     function different_user(){
         $this->destroy_session_and_data();
         echo "Ввойдите занова";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
     /*
      * safety out

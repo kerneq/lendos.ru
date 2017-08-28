@@ -1,9 +1,13 @@
 <?php
-
+/*
+ * check for authorisation
+ */
 include_once 'authorisation/DataBase.php';
 require_once 'authorisation/login.php';
 $bd =new DataBase($hn, $un, $pw, $db);
+//code - come from vk or fb
 if (!$_GET['code']) {
+    //check if user has already auth
     $bd->start_session();
     if (!isset($_SESSION['id'])){
         echo <<<_END
@@ -24,9 +28,11 @@ _END;
         die();
 
     }
-}
-else {
-
+} else {
+/*
+ * authairisation via vk and fb
+ * out - $data
+ */
     $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6163804&redirect_uri=https://lendos.me/TEMPLATE.php&client_secret=yucaFtiTYOOj9hBsrHrI&code=' . $_GET['code']), true);
 
     if (!$token) {
@@ -50,16 +56,10 @@ else {
 
         $data = $data['response'][0];
     }
-
+    //add user to bd 'users'
     $bd->user_add($data);
-//$bd->add_order('df', 'sfd', 'sfd', 'sfd', 'sfd', 'sfd', 'sfd', 'sfd');
-//$bd->out_orders();
 
 }
-
-
-
-
 
 echo <<<_END
 <html lang="en">
@@ -98,8 +98,13 @@ echo <<<_END
     <![endif]-->
 </head>
 _END;
+
+/*
+ * get current name of user
+ */
 $bd->start_session();
 $name = $_SESSION['name'];
+
 echo <<<_END
 <body>
 
@@ -136,12 +141,18 @@ echo <<<_END
             </li>
         </ul>
 _END;
-
+/*
+ * if button 'exit' clicked
+ */
 if (isset($_POST['exit'])){
     $bd->destroy_session_and_data();
 
     header("Location: index.php");
 }
+/*
+ * if button 'end' clicked
+ * page content change to 'FINISH_ORDER.php'
+ */
 if (isset($_POST['end']))
 header("Location: FINISH_ORDER.php");
 echo <<<_END
@@ -168,10 +179,6 @@ echo <<<_END
         </div>
     </nav>
 _END;
-
-
-
-
 
 echo <<<_END
     <!-- Page Content -->
@@ -369,18 +376,21 @@ echo <<<_END
 </body>
 </html>
 _END;
-
+/*
+ * if button 'end' clicked
+ * the form is ready to be send
+ */
 if (isset($_POST['end'])){
-    $date_today = date("m.d.y"); //присвоено 03.12.01
-    $today[1] = date("H:i:s"); //присвоит 1 элементу массива 17:16:17
+    //date format 03.12.01
+    $date_today = date("m.d.y");
+    //time format 17:16:17
+    $today[1] = date("H:i:s");
     $date = $today[1].' / '.$date_today;
+    //adding data of order of current user to table 'oreders'
     $bd->add_order($_POST['url'], $_POST['vk_pixel'],
         $_POST['fb_pixel'],$_POST['metka_pixel'],
         $date, $_POST['price'], $_POST['modules'],
         $_POST['module1'].$_POST['module2']);
-
-
-
 }
 
 ?>

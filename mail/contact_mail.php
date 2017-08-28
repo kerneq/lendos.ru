@@ -5,12 +5,10 @@
  * Date: 12.08.17
  * Time: 17:27
  */
-
 /*
  * html form
  *form -> action page of post "" to localhost
  */
-
 class contact_mail
 {
     public function __construct($id, $question, $name, $email_address, $phone, $message, $vk, $fb)
@@ -37,11 +35,11 @@ class contact_mail
         // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com
         $headers = "From: noreply@localhost.com\n";
         $headers .= "Reply-To: $email_address";
+        //send to Maha
         $result = mail($to, $email_subject, $email_body, $headers);
-
         if (!$result) echo "Ваша письмо не отправилось!";
+        //send to Stas
         $result = mail($tos, $email_subject, $email_body, $headers);
-
         if (!$result) echo "Ваша письмо не отправилось!";
     }
 }

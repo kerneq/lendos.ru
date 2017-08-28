@@ -1,4 +1,5 @@
 <?php
+//check if user has already auth
 session_start();
 if (!isset($_SESSION['id'])){
     echo <<<_END
@@ -19,6 +20,7 @@ _END;
     die();
 
 }
+
 echo <<<_END
 <html lang="en">
 <head>
@@ -56,8 +58,13 @@ echo <<<_END
     <![endif]-->
 </head>
 _END;
+
+/*
+ * get current name of user
+ */
 session_start();
 $name = $_SESSION['name'];
+
 echo <<<_END
 <body>
 
@@ -94,6 +101,9 @@ echo <<<_END
         </ul>
 _END;
 
+/*
+ * if button 'exit' clicked
+ */
 if (isset($_POST['exit'])){
     $bd->destroy_session_and_data();
 
@@ -124,10 +134,13 @@ echo <<<_END
         </div>
     </nav>
 _END;
-
+/*
+ * update data of current user
+ */
 include_once 'authorisation/login.php';
 include_once 'authorisation/DataBase.php';
 $bd = new DataBase($hn,$un,$pw,$db);
+//get data of currenr user from table 'users'
 $result = $bd->take_inf();
 $result->data_seek(0);
 $row = $result->fetch_array(MYSQLI_NUM);
@@ -136,14 +149,17 @@ $user_email = $row[3];
 $user_phone = $row[4];
 $user_vk = $row[5];
 $user_fb = $row[6];
-
+/*
+ * if button 'send' clicked
+ * change data of current user
+ * page content change to 'TEMPLATE.php'
+ * it is nessesary to apply changies to user see
+ */
 if (isset($_POST['send'])){
     $bd->update($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['vk'], $_POST['fb']);
     header("Location: ../TEMPLATE.php");
-
-
-
 }
+
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -215,9 +231,6 @@ echo <<<_END
                         </div>
                     </div>
                 </div>
-
-
-
                 <button   type="submit" class="btn btn-success" style="margin-top: 25px;" name="send">Сохранить</button>
             </form>
 
@@ -243,8 +256,5 @@ echo <<<_END
 </html>
 
 _END;
-//if(isset($_POST['name'])||isset($_POST['email'])||isset($_POST['phone'])||isset($_POST['vk'])||isset($_POST['fb']))
-
-
 
 ?>

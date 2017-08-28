@@ -1,4 +1,5 @@
 <?php
+//check if user has already auth
 session_start();
 if (!isset($_SESSION['id'])){
     echo <<<_END
@@ -19,6 +20,7 @@ _END;
     die();
 
 }
+
 echo <<<_END
 <html lang="en">
 <head>
@@ -62,6 +64,9 @@ echo <<<_END
     </style>
 </head>
 _END;
+/*
+ * get current name of user
+ */
 session_start();
 $name = $_SESSION['name'];
 
@@ -106,10 +111,11 @@ echo <<<_END
             </li>
         </ul>
 _END;
-
+/*
+ * if button 'exit' clicked
+ */
 if (isset($_POST['exit'])){
     $bd->destroy_session_and_data();
-
     header("Location: index.php");
 }
 
@@ -168,9 +174,14 @@ _END;
 echo <<<_END
                     <tbody>
 _END;
+/*
+ * get orders from table 'orders'
+ * if status is 'paid'
+ */
 include_once 'authorisation/login.php';
 include_once 'authorisation/DataBase.php';
 $bd = new DataBase($hn, $un, $pw, $db);
+//get all orders of current user
 $result = $bd->out_orders();
 $rows = $result->num_rows;
 $num = 1;
@@ -223,4 +234,5 @@ echo <<<_END
 </body>
 </html>
 _END;
+
 ?>
