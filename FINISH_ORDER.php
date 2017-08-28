@@ -201,7 +201,9 @@ echo <<<_END
                             required="required"
                             >
                 </div>
-                <!-- phone -->
+                
+                <!-- phone-->
+                <!--
                 <div class="form-group">
                     <label for="exampleInputEmail1">Ваш телефон (по желанию)</label>
                     <input type="text" class="form-control"
@@ -209,7 +211,7 @@ echo <<<_END
                            placeholder="$user_phone"
                            style="width: 40%"
                            name="phone">
-                </div>
+                </div>-->
 
                 <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
                 <b>К оплате: $out_summ рублей</b>
