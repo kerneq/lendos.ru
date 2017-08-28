@@ -179,7 +179,7 @@ $IsTest=1;
 $new_sum = json_decode(file_get_contents('https://auth.robokassa.ru/Merchant/WebService/Service.asmx/CalcOutSumm?MerchantLogin='.$mrh_login.'&IncCurrLabel='.$in_curr.'&IncSum='.$out_summ));
 echo '<pre>';
 var_dump($new_sum);
-echo '</pre>';
+echo '</pre>';/*
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -251,5 +251,5 @@ echo <<<_END
 </body>
 </html>
 _END;
-
+*/
 ?>
