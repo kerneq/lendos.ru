@@ -20,7 +20,7 @@ _END;
     die();
 
 }
-
+/*
 echo <<<_END
 <html lang="en">
 <head>
@@ -63,7 +63,7 @@ _END;
  */
 session_start();
 $name = $_SESSION['name'];
-
+/*
 echo <<<_END
 <body>
 
@@ -107,7 +107,7 @@ if (isset($_POST['exit'])){
 
     header("Location: index.php");
 }
-
+/*
 echo <<<_END
         <!-- Sidebar -->
         <div class="navbar-default sidebar" role="navigation">
