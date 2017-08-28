@@ -20,7 +20,7 @@ _END;
     die();
 
 }
-/*
+
 echo <<<_END
 <html lang="en">
 <head>
@@ -63,7 +63,7 @@ _END;
  */
 session_start();
 $name = $_SESSION['name'];
-/*
+
 echo <<<_END
 <body>
 
@@ -107,7 +107,7 @@ if (isset($_POST['exit'])){
 
     header("Location: index.php");
 }
-/*
+
 echo <<<_END
         <!-- Sidebar -->
         <div class="navbar-default sidebar" role="navigation">
@@ -177,9 +177,7 @@ $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 $IsTest=1;
 //method of payment without % we pay %
 $new_sum = json_decode(file_get_contents('https://auth.robokassa.ru/Merchant/WebService/Service.asmx/CalcOutSumm?MerchantLogin='.$mrh_login.'&IncCurrLabel='.$in_curr.'&IncSum='.$out_summ));
-echo '<pre>';
-var_dump($new_sum);
-echo '</pre>';/*
+
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -221,7 +219,7 @@ echo <<<_END
                 <b>К оплате: $out_summ рублей</b>
                 </br></br>
                 <input type=hidden name=MrchLogin value=$mrh_login>
-                <input type=hidden name=OutSum value=$new_sum>
+                <input type=hidden name=OutSum value=$out_summ>
                 <input type=hidden name=InvId value=$inv_id>
                 <input type=hidden name=Desc value='$inv_desc'>
                 <input type=hidden name=SignatureValue value=$crc>
@@ -251,5 +249,5 @@ echo <<<_END
 </body>
 </html>
 _END;
-*/
+
 ?>
