@@ -132,21 +132,28 @@ echo <<<_END
         </div>
     </nav>
 _END;
-
+/*
+ * out current date of user email and phone
+ */
 include_once 'authorisation/login.php';
 include_once 'authorisation/DataBase.php';
 $bd = new DataBase($hn,$un,$pw,$db);
+//get data of currenr user from table 'users'
 $result = $bd->take_inf();
 $result->data_seek(0);
 $row = $result->fetch_array(MYSQLI_NUM);
 $user_email = $row[3];
 $user_phone = $row[4];
+//get data of currenr user from table 'order'
 $result = $bd->out_orders();
+//need only last add
 $rows = $result->num_rows-1;
 $result->data_seek($rows);
 $row = $result->fetch_array(MYSQLI_NUM);
+
 if (isset($_POST['email']))
 $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
+//login to robokassa
 $mrh_login = "lendosme";
 //password1
 $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
@@ -169,7 +176,6 @@ $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 //parameter for testing 1 - test 0 - not test
 $IsTest=1;
 
-
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -183,8 +189,8 @@ echo <<<_END
 
             <!-- ... Your content goes here ... -->
            <form id="form1" action="FINISH_ORDER.php" method="post"></form>
-    <form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
-        <!-- e-mail -->
+           <form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
+           <!-- e-mail -->
                 <div class="form-group">
                     <label for="exampleInputEmail1">Ваш e-mail</label>
                     <input type="email" class="form-control"
@@ -206,19 +212,19 @@ echo <<<_END
                 </div>
 
                 <p style="color: green">* через два часа ваш заказ будет готов и мы свяжемся с вами</p>
-                <b>К оплате: $row[7] рублей</b>
+                <b>К оплате: $out_summ рублей</b>
                 </br></br>
-    <input type=hidden name=MrchLogin value=$mrh_login>
-    <input type=hidden name=OutSum value=$out_summ>
-    <input type=hidden name=InvId value=$inv_id>
-    <input type=hidden name=Desc value='$inv_desc'>
-    <input type=hidden name=SignatureValue value=$crc>
-    <input type=hidden name=Shp_item value='$shp_item'>
-    <input type=hidden name=IncCurrLabel value=$in_curr>
-    <input type=hidden name=Culture value=$culture>
-    <input type=hidden name=IsTest value=$IsTest>
-    <input type=submit value='Оплата' name="pay">
-    </form>
+                <input type=hidden name=MrchLogin value=$mrh_login>
+                <input type=hidden name=OutSum value=$out_summ>
+                <input type=hidden name=InvId value=$inv_id>
+                <input type=hidden name=Desc value='$inv_desc'>
+                <input type=hidden name=SignatureValue value=$crc>
+                <input type=hidden name=Shp_item value='$shp_item'>
+                <input type=hidden name=IncCurrLabel value=$in_curr>
+                <input type=hidden name=Culture value=$culture>
+                <input type=hidden name=IsTest value=$IsTest>
+                <input type=submit value='Оплата' name="pay" form="form1">
+           </form>
         </div>
     </div>
 
