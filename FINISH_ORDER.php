@@ -199,7 +199,7 @@ echo <<<_END
                             style="width: 40%"
                             name="email"
                             required="required"
-                            form="form1">
+                            >
                 </div>
                 <!-- phone -->
                 <div class="form-group">

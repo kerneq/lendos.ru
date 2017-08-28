@@ -6,23 +6,18 @@
  * Time: 10:25
  */
 
-
-// регистрационная информация (пароль #1)
 // registration info (password #1)
 $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 
-// чтение параметров
 // read parameters
 $out_summ = $_REQUEST["OutSum"];
 $inv_id = $_REQUEST["InvId"];
 $shp_item = $_REQUEST["Shp_item"];
 $crc = $_REQUEST["SignatureValue"];
-
 $crc = strtoupper($crc);
-
 $my_crc = strtoupper(md5("$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item"));
-
-// проверка корректности подписи
+session_start();
+$_SESSION['we'] = "hello";
 // check signature
 if ($my_crc != $crc)
 {
@@ -30,7 +25,6 @@ if ($my_crc != $crc)
     exit();
 }
 
-// проверка наличия номера счета в истории операций
 // check of number of the order info in history of operations
 $f=@fopen("order.txt","r+") or die("error");
 
