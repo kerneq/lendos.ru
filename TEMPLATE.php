@@ -381,6 +381,7 @@ _END;
  * the form is ready to be send
  */
 if (isset($_POST['end'])){
+    date_default_timezone_set('Europe/Moscow');
     //date format 03.12.01
     $date_today = date("m.d.y");
     //time format 17:16:17
