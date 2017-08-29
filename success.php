@@ -9,7 +9,7 @@
 //parameter for testing 1 - test 0 - not test
 $IsTest=1;
 //password1
-if ($IsTest===0)
+if ($IsTest===1)
     $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 else
     $mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";

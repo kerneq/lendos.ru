@@ -158,7 +158,7 @@ $mrh_login = "lendosme";
 //parameter for testing 1 - test 0 - not test
 $IsTest=1;
 //password1
-if ($IsTest===0)
+if ($IsTest===1)
     $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
 else
     $mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
@@ -229,7 +229,7 @@ echo <<<_END
                 <input type=hidden name=Shp_item value='$shp_item'>
                 <input type=hidden name=IncCurrLabel value=$in_curr>
                 <input type=hidden name=Culture value=$culture>
-              <!--  <input type=hidden name=IsTest value=$IsTest>-->
+                <input type=hidden name=IsTest value=$IsTest>
                 <input type=submit value='Оплата' name="pay">
            </form>
         </div>
