@@ -229,7 +229,7 @@ echo <<<_END
                 <input type=hidden name=Shp_item value='$shp_item'>
                 <input type=hidden name=IncCurrLabel value=$in_curr>
                 <input type=hidden name=Culture value=$culture>
-                <input type=hidden name=IsTest value=$IsTest>
+              <!--  <input type=hidden name=IsTest value=$IsTest>-->
                 <input type=submit value='Оплата' name="pay">
            </form>
         </div>
