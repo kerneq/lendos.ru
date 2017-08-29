@@ -155,14 +155,19 @@ if (isset($_POST['email']))
 $bd->update(NULL, $_POST['email'], NULL, NULL, NULL);
 //login to robokassa
 $mrh_login = "lendosme";
+//parameter for testing 1 - test 0 - not test
+$IsTest=1;
 //password1
-$mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
+if ($IsTest===1)
+    $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
+else
+    $mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
 // number of order
 $inv_id = $row[0];
 // order description
 $inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
 // sum of order
-$out_summ = $row[7];
+$out_summ = 1;
 // code of goods
 $shp_item = 1;
 // default payment e-currency
@@ -173,8 +178,6 @@ $culture = "ru";
 $encoding = "utf-8";
 // generate signature
 $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
-//parameter for testing 1 - test 0 - not test
-$IsTest=1;
 //method of payment without % we pay %
 $new_sum = json_decode(file_get_contents('https://auth.robokassa.ru/Merchant/WebService/Service.asmx/CalcOutSumm?MerchantLogin='.$mrh_login.'&IncCurrLabel='.$in_curr.'&IncSum='.$out_summ));
 

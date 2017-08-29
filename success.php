@@ -6,9 +6,13 @@
  * Time: 10:25
  */
 
-// registration info (password #1)
-$mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
-
+//parameter for testing 1 - test 0 - not test
+$IsTest=1;
+//password1
+if ($IsTest===1)
+    $mrh_pass1 = "a1EH0K5FXTUfOfK5asP3";
+else
+    $mrh_pass1 = "Rp6L1MOZh8YjY40RJllf";
 // read parameters
 $out_summ = $_REQUEST["OutSum"];
 $inv_id = $_REQUEST["InvId"];

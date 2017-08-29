@@ -6,9 +6,14 @@
  * Time: 10:24
  */
 
-// registration info (password #2)
-$mrh_pass2 = "q15CS1uno4Mw9RFUmHkl";
 
+//parameter for testing 1 - test 0 - not test
+$IsTest=1;
+// registration info (password #2)
+if ($IsTest===1)
+    $mrh_pass2 = "q15CS1uno4Mw9RFUmHkl";
+else
+    $mrh_pass2 = "aqP7wt419fZSp7heFMoT";
 
 //current date
 $tm=getdate(time()+9*3600);

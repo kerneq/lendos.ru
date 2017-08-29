@@ -17,7 +17,7 @@ class contact_mail
      * else
      * for SUPPORT.php
      */
-    public function __construct($id, $question, $name, $email_address, $phone, $message, $vk, $fb, $num_order,$hn,$un,$pw,$db)
+    public function __construct($id, $question, $name, $email_address, $phone, $message, $vk, $fb, $num_order, $hn, $un, $pw, $db)
     {
         $question = strip_tags(htmlspecialchars($question));
 
