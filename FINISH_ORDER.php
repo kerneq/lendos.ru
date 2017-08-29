@@ -167,7 +167,7 @@ $inv_id = $row[0];
 // order description
 $inv_desc = "Вы успешно оплатили свой заказ, во вкладке заказ вы его увидите";
 // sum of order
-$out_summ = 1;
+$out_summ = $row[7];
 // code of goods
 $shp_item = 1;
 // default payment e-currency
