@@ -8,7 +8,7 @@
 
 
 //parameter for testing 1 - test 0 - not test
-$IsTest=1;
+$IsTest=0;
 // registration info (password #2)
 if ($IsTest===1)
     $mrh_pass2 = "q15CS1uno4Mw9RFUmHkl";
