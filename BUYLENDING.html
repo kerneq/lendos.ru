@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Оформление заказа</title>
+    <title>Оформление заказа gо индивидуальному лендингу</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -95,21 +95,17 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Оформление заказа</h1>
+                    <h1 class="page-header">Оформление заказа на индивидуальный лендинг</h1>
                 </div>
             </div>
 
             <!-- ... Your content goes here ... -->
 
             <form role="form" style="margin-bottom: 50px;">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Адрес лендинга для копирования</label>
-                    <input required="required"
-                           type="text" class="form-control"
-                           id="exampleInputEmail1"
-                           placeholder="http://site.ru"
-                            style="width: 40%">
-                </div>
+                <p>
+                    Вы выбрали <b>Название лендинга</b>
+                    <button type="button" class="btn btn-success" style="margin-left: 15px;">Предосмотр</button>
+                </p>
 
                 <p style="margin-top: 20px;">
                     <a class="btn btn-primary" data-toggle="collapse"
@@ -166,22 +162,6 @@
                                         </label>
                                         </br>
                                         <label class="form-check-label">
-                                            <input id="online-konsul" class="form-check-input" type="checkbox"> Онлайн-консультант
-                                        </label>
-                                        </br>
-                                        <label class="form-check-label">
-                                            <input id="generator-lidov" class="form-check-input" type="checkbox"> Генератор лидов
-                                        </label>
-                                        </br>
-                                        <label class="form-check-label">
-                                            <input id="adv-vidjet" class="form-check-input" type="checkbox"> Рекламный виджет
-                                        </label>
-                                        </br>
-                                        <label class="form-check-label">
-                                            <input id="call-back" class="form-check-input" type="checkbox"> Обратный звонок
-                                        </label>
-                                        </br>
-                                        <label class="form-check-label">
                                             <input id="different" class="form-check-input" type="checkbox"> Другой (напишите об нем в форме ниже)
                                         </label>
                                     </div>
@@ -189,6 +169,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- checkbox year support -->
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id="year-support">
+                        Полное годовое обслуживание и поддержка (+ 500 рублей)
+                    </label>
                 </div>
 
                 <!-- text block -->
@@ -229,7 +217,7 @@
 
                 <!-- total costs -->
                 <div id="totalCosts">
-                    <p id="costs" style="color: green; margin-top: 10px;">Полная стоимость: 350 рублей</p>
+                    <p id="costs" style="color: green; margin-top: 10px;">Полная стоимость: 3500 рублей</p>
                 </div>
 
                 <button type="submit" class="btn btn-default" style="margin-top: 10px;">Закончить оформление</button>
@@ -238,7 +226,6 @@
 
         </div>
     </div>
-
 </div>
 
 <!-- jQuery -->
@@ -254,48 +241,30 @@
 <script src="js/startmin.js"></script>
 
 <script>
-    var siteCosts = 350;
-    var pixelCosts = 100;
-    var moduleCosts = 150;
-
-    var checkBoxesSelected = 0;
-
     // init
-    $('#vk-fast').attr('checked', false);
-    $('#different').attr('checked', false);
-
-    // check input text with pixels ID
-    $( "#pixel-vk, #pixel-fb, #pixel-metrika" ).change(function() {
-        updateTotalCosts();
-    });
+    $('#year-support').attr('checked', false);
+    var isChecked = false;
 
     // validation checkboxes
-    $("#vk-fast, #different, #online-konsul, #generator-lidov, #adv-vidjet, #call-back").change(
+    $("#year-support").change(
         function() {
             if ($(this).is(':checked')) {
-                checkBoxesSelected++;
+                isChecked = true;
                 updateTotalCosts();
             } else {
-                checkBoxesSelected--;
+                isChecked = false;
                 updateTotalCosts();
             }
         });
 
     // recount total price
     function updateTotalCosts() {
-        var total = siteCosts;
+        var total = 3500;
 
-        if ($("#pixel-vk").val() !== ''
-            || $("#pixel-fb").val() !== ''
-            || $("#pixel-metrika").val() !== '') {
-            total += pixelCosts;
-        }
-
-        total += moduleCosts * checkBoxesSelected;
+        total += (isChecked) ? 500 : 0;
         $("#costs").text('Полная стоимость: ' + total + ' рублей');
         $("#hidden-price").val(total);
     }
-
 </script>
 
 </body>
