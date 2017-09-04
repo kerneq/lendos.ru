@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/success.php" afterPath="$PROJECT_DIR$/success.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -595,14 +594,7 @@
       <workItem from="1503847530613" duration="22178000" />
       <workItem from="1504019251589" duration="2042000" />
       <workItem from="1504044834866" duration="645000" />
-      <workItem from="1504517017432" duration="557000" />
-    </task>
-    <task id="LOCAL-00022" summary="do robokassa">
-      <created>1503773942854</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1503773942854</updated>
+      <workItem from="1504517017432" duration="774000" />
     </task>
     <task id="LOCAL-00023" summary="do robokassa">
       <created>1503821055118</created>
@@ -940,11 +932,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504044876727</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="something new">
+      <created>1504518486489</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1504518486491</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96121000" />
+    <option name="totallyTimeSpent" value="96338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
@@ -986,7 +985,8 @@
     <MESSAGE value="do robokassa" />
     <MESSAGE value="send us email about paid order" />
     <MESSAGE value="change timezone" />
-    <option name="LAST_COMMIT_MESSAGE" value="change timezone" />
+    <MESSAGE value="something new" />
+    <option name="LAST_COMMIT_MESSAGE" value="something new" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
