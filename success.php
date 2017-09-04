@@ -21,7 +21,6 @@ $crc = $_REQUEST["SignatureValue"];
 $crc = strtoupper($crc);
 $my_crc = strtoupper(md5("$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item"));
 session_start();
-$_SESSION['we'] = "hello";
 // check signature
 if ($my_crc != $crc)
 {
@@ -45,7 +44,7 @@ if ($my_crc != $crc)
     $user_vk = $row[5];
     $user_fb = $row[6];
     new contact_mail($_SESSION['id'], NULL,$user_name, $user_email, $user_phone, NULL, $user_vk, $user_fb, $inv_id,$hn,$un,$pw,$db);
-
+    header("Location: TEMPLATE.php");
 }
 /*
 // check of number of the order info in history of operations
