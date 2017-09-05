@@ -141,7 +141,9 @@ echo <<<_END
             </div>
         </div>
     </nav>
-
+_END;
+/*
+echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
@@ -319,5 +321,5 @@ echo <<<_END
 </body>
 </html>
 _END;
-
+*/
 ?>
