@@ -5,6 +5,7 @@
  * Date: 05.09.17
  * Time: 12:56
  */
+/*
 session_start();
 if (!isset($_SESSION['id'])) {
     /* echo <<<_END
@@ -21,10 +22,10 @@ if (!isset($_SESSION['id'])) {
                  </div>
 
 
- _END;*/
+ _END;
     header("Location: AUTH.php");
     die();
-}
+}*/
 
 echo <<<_END
 <html lang="en">
