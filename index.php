@@ -224,7 +224,7 @@
             <div class="row" style="position: relative; bottom: 45px;">
                 <div class="col-lg-5"></div>
                 <div class="col-lg-2">
-                    <a href="#" class="btn btn-secondary btn-medium">
+                    <a href="LENDINGS.php" class="btn btn-secondary btn-medium">
                         <span class="network-name">Смотреть еще</span>
                     </a>
                 </div>
@@ -289,7 +289,7 @@
                         <div class="col-md-8" style="padding-left: 20px;">
                             Качественная адаптация лендинга под вас, доработки по вашему желанию,
                             полное сопровождение на 1 год
-                            и запуск на хостинге: 4000 рублей </br> <a href="#">ЗАКАЗАТЬ</a>
+                            и запуск на хостинге: 4000 рублей </br> <a href="TEMPLATE.php">ЗАКАЗАТЬ</a>
                         </div>
                     </div>
 

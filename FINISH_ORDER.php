@@ -121,6 +121,9 @@ echo <<<_END
                         <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
                     </li>
                     <li>
+                        <a href="LENDINGS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Каталог лендингов</a>
+                    </li>
+                    <li>
                         <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
                     </li>
                     <li>
