@@ -10,7 +10,7 @@ if (!$_GET['code']) {
     //check if user has already auth
     $bd->start_session();
     if (!isset($_SESSION['id'])){
-        echo <<<_END
+        /*echo <<<_END
                 <div class="col-lg-6">
                     <div class="alert alert-info">
         Чтобы войти в систему Вам необходимо авторизоваться через одну из следующих социальных
@@ -24,9 +24,9 @@ if (!$_GET['code']) {
                 </div>
           
 
-_END;
+_END;*/
+        file_get_contents('AUTH.php');
         die();
-
     }
 } else {
 /*

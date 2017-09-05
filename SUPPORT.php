@@ -2,7 +2,7 @@
 //check if user has already auth
 session_start();
 if (!isset($_SESSION['id'])){
-    echo <<<_END
+    /*echo <<<_END
                 <div class="col-lg-6">
                     <div class="alert alert-info">
         Чтобы войти в систему Вам необходимо авторизоваться через одну из следующих социальных
@@ -16,7 +16,9 @@ if (!isset($_SESSION['id'])){
                 </div>
           
 
-_END;
+_END;*/
+    file_get_contents('AUTH.php');
+
     die();
 
 }
