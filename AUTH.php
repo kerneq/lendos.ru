@@ -66,19 +66,19 @@ echo <<<_END
 
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="TEMPLATE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
+                        <a href="TEMPLATE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Новый заказ</a>
                     </li>
                     <li>
-                        <a href="ORDERS.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
+                        <a href="ORDERS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Мои заказы</a>
                     </li>
                     <li>
                         <a href="LENDINGS.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Каталог лендингов</a>
                     </li>
                     <li>
-                        <a href="PROFILE.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
+                        <a href="PROFILE.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Профиль</a>
                     </li>
                     <li>
-                        <a href="SUPPORT.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
+                        <a href="SUPPORT.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Связаться с нами</a>
                     </li>
                 </ul>
 _END;

@@ -25,7 +25,7 @@ if (!$_GET['code']) {
           
 
 _END;*/
-        file_get_contents('AUTH.php');
+        header("Location: AUTH.php");
         die();
     }
 } else {
