@@ -17,7 +17,7 @@ if (!isset($_SESSION['id'])){
           
 
 _END;*/
-    file_get_contents('AUTH.php');
+    header("Location: AUTH.php");
 
     die();
 
