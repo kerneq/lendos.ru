@@ -162,7 +162,7 @@ _END;
                 <!-- info -->
                 <div class="col-lg-8" style="margin-bottom: 15px;">
                     <!-- lending name -->
-                    <p style="font-size: 30px;">Lending name</p>
+                    <p style="font-size: 30px;">Lending1</p>
                     <p style="font-size: 16px;">Тематика: бизнес</p>
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
@@ -183,7 +183,7 @@ _END;
                 <!-- info -->
                 <div class="col-lg-8" style="margin-bottom: 15px;">
                     <!-- lending name -->
-                    <p style="font-size: 30px;">Lending name</p>
+                    <p style="font-size: 30px;">Lending2</p>
                     <p style="font-size: 16px;">Тематика: бизнес</p>
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
@@ -204,7 +204,7 @@ _END;
                 <!-- info -->
                 <div class="col-lg-8" style="margin-bottom: 15px;">
                     <!-- lending name -->
-                    <p style="font-size: 30px;">Lending name</p>
+                    <p style="font-size: 30px;">Lending3</p>
                     <p style="font-size: 16px;">Тематика: бизнес</p>
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
@@ -225,7 +225,7 @@ _END;
                 <!-- info -->
                 <div class="col-lg-8" style="margin-bottom: 15px;">
                     <!-- lending name -->
-                    <p style="font-size: 30px;">Lending name</p>
+                    <p style="font-size: 30px;">Lending4</p>
                     <p style="font-size: 16px;">Тематика: бизнес</p>
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
