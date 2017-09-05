@@ -5,7 +5,7 @@
  * Date: 05.09.17
  * Time: 12:56
  */
-/*
+
 session_start();
 if (!isset($_SESSION['id'])) {
     /* echo <<<_END
@@ -22,10 +22,10 @@ if (!isset($_SESSION['id'])) {
                  </div>
 
 
- _END;
+ _END;*/
     header("Location: AUTH.php");
     die();
-}*/
+}
 
 echo <<<_END
 <html lang="en">
@@ -63,7 +63,7 @@ echo <<<_END
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+
 _END;
 /*
  * get current name of user
@@ -72,6 +72,7 @@ $bd->start_session();
 $name = $_SESSION['name'];
 
 echo <<<_END
+<body>
 <div id="wrapper">
 
     <!-- Navigation -->
@@ -152,9 +153,6 @@ echo <<<_END
                     <h1 class="page-header">Оформление заказа на индивидуальный лендинг</h1>
                 </div>
             </div>
-_END;
-
-echo <<<_END
             <!-- ... Your content goes here ... -->
 
             <form role="form" style="margin-bottom: 50px;">
