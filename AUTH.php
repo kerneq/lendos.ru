@@ -50,7 +50,7 @@ echo <<<_END
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="TEMPLATE.html">Lendos.ru</a>
+            <a class="navbar-brand" href="TEMPLATE.php">Lendos.ru</a>
         </div>
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

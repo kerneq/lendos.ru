@@ -5,6 +5,27 @@
  * Date: 05.09.17
  * Time: 12:13
  */
+session_start();
+if (!isset($_SESSION['id'])){
+    /*echo <<<_END
+                <div class="col-lg-6">
+                    <div class="alert alert-info">
+        Чтобы войти в систему Вам необходимо авторизоваться через одну из следующих социальных
+сетей
+        </br>
+                        <div align="center">
+                            <a href="https://oauth.vk.com/authorize?client_id=6163804&display=page&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code" style="margin-right: 5px" name="vk"><img src="img/vk2.png" width="41"/></a>
+                            <a href="https://www.facebook.com/v2.9/dialog/oauth?client_id=261920790992777&redirect_uri=https://lendos.me/TEMPLATE.php&response_type=code&scope=public_profile,email" style="margin-left: 5px;" name="fb"><img src="img/fb.png" width="41"/></a>
+                        </div>
+                    </div>
+                </div>
+
+
+_END;*/
+    header("Location: AUTH.php");
+    die();
+
+}
 echo <<<_END
 <html lang="en">
 <head>
@@ -55,7 +76,7 @@ $name = $_SESSION['name'];
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="TEMPLATE.html">Lendos.ru</a>
+            <a class="navbar-brand" href="TEMPLATE.php">Lendos.ru</a>
         </div>
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -72,7 +93,7 @@ $name = $_SESSION['name'];
                     <i class="fa fa-user fa-fw"></i> $name <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="PROFILE.html"><i class="fa fa-user fa-fw"></i> Профиль</a>
+                    <li><a href="PROFILE.php"><i class="fa fa-user fa-fw"></i> Профиль</a>
                     <li class="divider"></li>
                     <li><form action="TEMPLATE.php" method="POST" id='form2'>
                     <input type="submit" value="Выйти" name ="exit" />
@@ -146,7 +167,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -167,7 +188,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -188,7 +209,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -209,7 +230,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary">Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
