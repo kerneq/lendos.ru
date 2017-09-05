@@ -68,7 +68,7 @@ _END;
 /*
  * get current name of user
  */
-$bd->start_session();
+session_start();
 $name = $_SESSION['name'];
 
 echo <<<_END
@@ -142,7 +142,7 @@ echo <<<_END
         </div>
     </nav>
 _END;
-/*
+
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -321,5 +321,5 @@ echo <<<_END
 </body>
 </html>
 _END;
-*/
+
 ?>
