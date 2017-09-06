@@ -243,7 +243,7 @@ _END;
 
 </div>
 <!--post to buylending-->
-<script type="application/javascript" src="postNameOfLending.js"></script>
+<script type="application/javascript" src="js/postOb.js"></script>
 
 
 
