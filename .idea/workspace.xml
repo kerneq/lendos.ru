@@ -114,8 +114,8 @@
       <file leaf-file-name="postOb.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/postOb.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <state relative-caret-position="320">
+              <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -523,14 +523,7 @@
       <workItem from="1504044834866" duration="645000" />
       <workItem from="1504517017432" duration="1716000" />
       <workItem from="1504602680422" duration="6291000" />
-      <workItem from="1504688898242" duration="7186000" />
-    </task>
-    <task id="LOCAL-00048" summary="change vk api">
-      <created>1503855992272</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1503855992272</updated>
+      <workItem from="1504688898242" duration="7284000" />
     </task>
     <task id="LOCAL-00049" summary="change vk api">
       <created>1503856565498</created>
@@ -868,11 +861,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504726231630</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="buy lending">
+      <created>1504726533399</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1504726533399</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110757000" />
+    <option name="totallyTimeSpent" value="110855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1833" height="1083" extended-state="6" />
@@ -1582,8 +1582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/postOb.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="320">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -30,13 +30,13 @@ function ajaxRequest()
 function clicked(lendingName){
     params = "lendingName="+lendingName;
     postOb = new ajaxRequest();
-    postOb.open("POST", "BUYLENDING.php", true);
+    postOb.open("POST", "../BUYLENDING.php", true);
     postOb.setRequestHeader("Content-type",
         "application/x-www-form-urlencoded");
     postOb.setRequestHeader("Content-length", params.length);
     postOb.setRequestHeader("Connection", "close");
     postOb.send(params);
-    alert(lendingName);
+    //alert(lendingName);
     location.href="BUYLENDING.php";
 
 }
