@@ -152,7 +152,6 @@ _END;
 _END;
 
     echo <<<_END
-    <script type="application/javascript" src="postNameOfLending.js"></script>
             <!-- ... Your content goes here ... -->
             <div class="row" style="border-bottom: 1px solid #e4dddd; margin-bottom: 50px;">
                 <!-- image -->
