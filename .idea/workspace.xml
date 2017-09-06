@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/postNameOfLending.js" afterPath="$PROJECT_DIR$/postNameOfLending.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LENDINGS.php" afterPath="$PROJECT_DIR$/LENDINGS.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/postNameOfLending.js" afterPath="$PROJECT_DIR$/postNameOfLending.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -125,8 +124,8 @@
       <file leaf-file-name="postNameOfLending.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/postNameOfLending.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="447">
+              <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -169,7 +168,7 @@
       <file leaf-file-name="LENDINGS.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LENDINGS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="-374">
               <caret line="218" column="16" lean-forward="true" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="16" />
               <folding>
                 <marker date="1504692476847" expanded="true" signature="1079:2269" ph="..." />
@@ -438,6 +437,7 @@
         <option value="$PROJECT_DIR$/LENDINGS.php" />
         <option value="$PROJECT_DIR$/js/postNameOfLending.js" />
         <option value="$PROJECT_DIR$/BUYLENDING.php" />
+        <option value="$PROJECT_DIR$/postNameOfLending.js" />
       </list>
     </option>
   </component>
@@ -619,14 +619,7 @@
       <workItem from="1504044834866" duration="645000" />
       <workItem from="1504517017432" duration="1716000" />
       <workItem from="1504602680422" duration="6291000" />
-      <workItem from="1504688898242" duration="3578000" />
-    </task>
-    <task id="LOCAL-00037" summary="do robokassa">
-      <created>1503824167191</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1503824167191</updated>
+      <workItem from="1504688898242" duration="3738000" />
     </task>
     <task id="LOCAL-00038" summary="do robokassa">
       <created>1503824395836</created>
@@ -964,11 +957,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504692269864</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="buy lending">
+      <created>1504692481997</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1504692481997</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107149000" />
+    <option name="totallyTimeSpent" value="107309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-11" width="1833" height="1083" extended-state="6" />
@@ -1498,14 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/postNameOfLending.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BUYLENDING.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1598,9 +1590,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/postNameOfLending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LENDINGS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="-374">
           <caret line="218" column="16" lean-forward="true" selection-start-line="218" selection-start-column="16" selection-end-line="218" selection-end-column="16" />
           <folding>
             <marker date="1504692476847" expanded="true" signature="1079:2269" ph="..." />
