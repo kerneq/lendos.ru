@@ -52,7 +52,7 @@ function clicked(lendingName){
     }
     request.send(params);*/
     var xhr = new ajaxRequest();
-    var params = "lendingName=" + lendingName;
+    var params = "lendingName=" + lendingName.value;
     xhr.open('POST', 'BUYLENDING.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
