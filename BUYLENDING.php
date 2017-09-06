@@ -141,7 +141,12 @@ echo <<<_END
         </div>
     </nav>
 _END;
+if (isset($_POST['lendingName'])){
+    $lending = $_POST['lendingName'];
+} else {
+    $lending = "nothingPost";
 
+}
 echo <<<_END
     <!-- Page Content -->
     <div id="page-wrapper">
@@ -156,7 +161,7 @@ echo <<<_END
 
             <form role="form" style="margin-bottom: 50px;">
                 <p>
-                    Вы выбрали <b>Название лендинга</b>
+                    Вы выбрали <b>$lending</b>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">Предосмотр</button>
                 </p>
 
