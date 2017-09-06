@@ -28,7 +28,7 @@ function ajaxRequest()
     return request
 }
 function clicked(lendingName){
-    /*params = "lendingName=kjhjjl";
+    params = "lendingName=" + lendingName;
     request = new ajaxRequest();
     request.open("POST", "BUYLENDING.php", true);
     request.setRequestHeader("Content-type",
@@ -50,9 +50,9 @@ function clicked(lendingName){
             else alert( "Ajax error: " + this.statusText)
         }
     }
-    request.send(params);*/
-    var xhr = new ajaxRequest();
-    var params = "lendingName=" + lendingName.value;
+    request.send(params);
+    /*var xhr = new ajaxRequest();
+    var params = "lendingName=" + lendingName;
     xhr.open('POST', 'BUYLENDING.php', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
@@ -60,7 +60,7 @@ function clicked(lendingName){
             alert(this.responseText);
         }
     }
-    xhr.send(params);
-    location.href="BUYLENDING.php";
+    xhr.send(params);*/
+    //location.href="BUYLENDING.php";
 
 }
