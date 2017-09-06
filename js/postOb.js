@@ -28,15 +28,29 @@ function ajaxRequest()
     return request
 }
 function clicked(lendingName){
-    params = "lendingName="+lendingName;
-    postOb = new ajaxRequest();
-    postOb.open("POST", "../BUYLENDING.php", true);
-    postOb.setRequestHeader("Content-type",
+    params = "lendingName=kjhjjl";
+    request = new ajaxRequest();
+    request.open("POST", "BUYLENDING.php", true);
+    request.setRequestHeader("Content-type",
         "application/x-www-form-urlencoded");
-    postOb.setRequestHeader("Content-length", params.length);
-    postOb.setRequestHeader("Connection", "close");
-    postOb.send(params);
-    //alert(lendingName);
+    request.setRequestHeader("Content-length", params.length);
+    request.setRequestHeader("Connection", "close");
+    request.onreadystatechange = function()
+    {
+        if (this.readyState == 4)
+        {
+            if (this.status == 200)
+            {
+                if (this.responseText != null)
+                {
+
+                }
+                else alert("Ajax error: No data received")
+            }
+            else alert( "Ajax error: " + this.statusText)
+        }
+    }
+    request.send(params);
     location.href="BUYLENDING.php";
 
 }
