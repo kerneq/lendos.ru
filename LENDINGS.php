@@ -152,6 +152,8 @@ _END;
 _END;
 
     echo <<<_END
+    <!--post to buylending-->
+<script type="application/javascript" src="js/postOb.js"></script>
             <!-- ... Your content goes here ... -->
             <div class="row" style="border-bottom: 1px solid #e4dddd; margin-bottom: 50px;">
                 <!-- image -->
@@ -241,8 +243,6 @@ _END;
     </div>
 
 </div>
-<!--post to buylending-->
-<script type="application/javascript" src="js/postOb.js"></script>
 
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
