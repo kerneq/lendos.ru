@@ -63,7 +63,6 @@ echo <<<_END
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 _END;
 /*
  * get current name of user

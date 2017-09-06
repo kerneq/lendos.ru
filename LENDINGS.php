@@ -152,6 +152,7 @@ _END;
 _END;
 
     echo <<<_END
+    <script type="application/javascript" src="js/postNameOfLending.js"></script>
             <!-- ... Your content goes here ... -->
             <div class="row" style="border-bottom: 1px solid #e4dddd; margin-bottom: 50px;">
                 <!-- image -->
@@ -167,7 +168,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='clicked("Lending1")'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -188,7 +189,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='clicked("Lending2")'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -209,7 +210,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='clicked("Lending3")'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -230,7 +231,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php"'>Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='clicked("Lending4")'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
@@ -241,6 +242,8 @@ _END;
     </div>
 
 </div>
+<!--post to buylending-->
+<script type="application/javascript" src="js/postNameOfLending.js"></script>
 
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
