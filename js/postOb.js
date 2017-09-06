@@ -61,6 +61,6 @@ function clicked(lendingName){
         }
     }
     xhr.send(params);*/
-    //location.href="BUYLENDING.php";
+    location.href="BUYLENDING.php";
 
 }
