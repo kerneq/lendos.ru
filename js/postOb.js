@@ -36,6 +36,7 @@ function clicked(lendingName){
     request.setRequestHeader("Content-length", params.length);
     request.setRequestHeader("Connection", "close");
     postOb.send(params);
+    alert(lendingName);
     location.href="BUYLENDING.php";
 
 }

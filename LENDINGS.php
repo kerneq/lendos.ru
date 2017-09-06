@@ -245,8 +245,6 @@ _END;
 <!--post to buylending-->
 <script type="application/javascript" src="js/postOb.js"></script>
 
-
-
 <!-- jQuery -->
 <script src="js/jquery.min.js"></script>
 
