@@ -141,8 +141,8 @@ echo <<<_END
         </div>
     </nav>
 _END;
-if (isset($_POST['lendingName'])){
-    $lending = $_POST['lendingName'];
+if (isset($_GET['ln'])){
+    $lending = $_GET['ln'];
 } else {
     $lending = "nothingPost";
 
