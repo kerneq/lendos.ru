@@ -144,7 +144,7 @@ _END;
 if (isset($_GET['ln'])){
     $lending = $_GET['ln'];
 } else {
-    $lending = "nothingPost";
+    $lending = "Не выбран";
 
 }
 echo <<<_END
