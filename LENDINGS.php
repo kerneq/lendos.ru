@@ -197,6 +197,7 @@ _END;
 _END;
 
     echo <<<_END
+
             <div class="row" style="border-bottom: 1px solid #e4dddd; margin-bottom: 50px;">
                 <!-- image -->
                 <div class="col-lg-3">
