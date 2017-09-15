@@ -233,7 +233,7 @@ _END;
                     <p style="font-size: 16px;">Мобильная версия: есть</p>
                     <p style="font-size: 16px;">Стоимость лендинга + любые доработки: 3500 рублей</p>
                     <p style="font-size: 16px;">Годовая поддержка: 500 рублей</p>
-                    <button type="button" class="btn btn-primary" onClick='clicked("Lending4")'>Заказать</button>
+                    <button type="button" class="btn btn-primary" onClick='location.href="BUYLENDING.php?ln=Lending4"'>Заказать</button>
                     <button type="button" class="btn btn-success" style="margin-left: 15px;">ДЕМО версия</button>
                 </div>
             </div>
