@@ -28,5 +28,5 @@ function ajaxRequest()
     return request
 }
 function clicked(lendingName){
-    location.href="BUYLENDING.php";
+    location.href="BUYLENDING.php?="+lendingName;
 }
