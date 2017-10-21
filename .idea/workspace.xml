@@ -2,40 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/auth.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/authorisation/DataBase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/authorisation/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-grid.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-grid.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-reboot.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap-reboot.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.bundle.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.bundle.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/css/auth-styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/css/friends.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/css/myWorkPlace-styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/css/profile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/friends.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/myWorkPlace.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase/profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROFILE.php" afterPath="$PROJECT_DIR$/PROFILE.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TEMPLATE.php" afterPath="$PROJECT_DIR$/TEMPLATE.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webimcase/profile.php" afterPath="$PROJECT_DIR$/webimcase/profile.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -111,12 +79,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webimcase/bootstrap/js/bootstrap.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webimcase/profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+              <folding>
+                <marker date="1508585939233" expanded="true" signature="213:1273" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="225:1273" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="1300:3103" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="1431:3103" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="1717:1785" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="1855:3092" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="1891:3077" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="1936:2092" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="2130:2250" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="2288:2408" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="2455:3059" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="2622:2675" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="2788:3037" ph="..." />
+                <marker date="1508585939233" expanded="false" signature="2862:2873" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="2874:3010" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="4199:5450" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="4313:4392" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="4468:4650" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="4722:5059" ph="..." />
+                <marker date="1508585939233" expanded="true" signature="5135:5322" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,16 +194,6 @@
       </file>
       <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landing-page.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/landing-page.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -303,6 +292,7 @@
         <option value="$PROJECT_DIR$/ORDERS.php" />
         <option value="$PROJECT_DIR$/TEMPLATE.php" />
         <option value="$PROJECT_DIR$/PROFILE.php" />
+        <option value="$PROJECT_DIR$/webimcase/profile.php" />
       </list>
     </option>
   </component>
@@ -391,6 +381,11 @@
               <item name="lendos.ru" type="b2602c69:ProjectViewProjectNode" />
               <item name="lendos.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mail" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="lendos.ru" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lendos.ru" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="webimcase" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -536,14 +531,7 @@
       <workItem from="1508425818984" duration="794000" />
       <workItem from="1508444984541" duration="603000" />
       <workItem from="1508448823295" duration="1269000" />
-      <workItem from="1508502588019" duration="2568000" />
-    </task>
-    <task id="LOCAL-00064" summary="send us email about paid order">
-      <created>1503919289499</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1503919289499</updated>
+      <workItem from="1508502588019" duration="2954000" />
     </task>
     <task id="LOCAL-00065" summary="send us email about paid order">
       <created>1504005060949</created>
@@ -881,16 +869,24 @@
       <option name="project" value="LOCAL" />
       <updated>1505500545353</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="add webimcase">
+      <created>1508585620274</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1508585620275</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159226000" />
+    <option name="totallyTimeSpent" value="159612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29011995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29011995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -930,7 +926,8 @@
     <MESSAGE value="add catalog of lendings" />
     <MESSAGE value="change authaurization" />
     <MESSAGE value="buy lending" />
-    <option name="LAST_COMMIT_MESSAGE" value="buy lending" />
+    <MESSAGE value="add webimcase" />
+    <option name="LAST_COMMIT_MESSAGE" value="add webimcase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -939,7 +936,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/SUPPORT.html" />
     <entry file="file://$PROJECT_DIR$/PROFILE.html" />
     <entry file="file://$PROJECT_DIR$/FINISH_ORDER.html" />
@@ -1523,6 +1519,35 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webimcase/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+          <folding>
+            <marker date="1508585939233" expanded="true" signature="213:1273" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="225:1273" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="1300:3103" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="1431:3103" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="1717:1785" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="1855:3092" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="1891:3077" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="1936:2092" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="2130:2250" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="2288:2408" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="2455:3059" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="2622:2675" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="2788:3037" ph="..." />
+            <marker date="1508585939233" expanded="false" signature="2862:2873" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="2874:3010" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="4199:5450" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="4313:4392" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="4468:4650" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="4722:5059" ph="..." />
+            <marker date="1508585939233" expanded="true" signature="5135:5322" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
