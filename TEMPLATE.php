@@ -71,7 +71,7 @@ echo <<<_END
     <meta name="author" content="">
 
     <title>Оформление заказа</title>
-
+    
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 

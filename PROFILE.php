@@ -183,7 +183,7 @@ echo <<<_END
                     <label >*Ваше Имя и Фамилия</label>
                     <input type="text" class="form-control"
                            placeholder="$user_name"
-                           
+     
                            name="name"
                             style="width: 40%">
                 </div>
