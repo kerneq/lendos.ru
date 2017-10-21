@@ -108,7 +108,7 @@ $user_phone = $row[3];
  */
 if (isset($_POST['save'])) {
     $bd->update($_POST['name'], $_POST['email'], $_POST['phone']);
-    header("Location: /myWorkPlace.php");
+    header("Location: /webimcase/myWorkPlace.php");
 }
 
 echo <<<_END
