@@ -1,41 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/auth.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/authorisation/DataBase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/authorisation/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-grid.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-grid.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-reboot.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap-reboot.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.bundle.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.bundle.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/bootstrap/js/bootstrap.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/css/auth-styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/css/friends.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/css/myWorkPlace-styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/css/profile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/friends.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/myWorkPlace.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webimcase2/profile.php" />
+    <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="add webimcase2.0">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webimcase/auth.php" afterPath="$PROJECT_DIR$/webimcase/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webimcase/authorisation/DataBase.php" afterPath="$PROJECT_DIR$/webimcase/authorisation/DataBase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webimcase/index.php" afterPath="$PROJECT_DIR$/webimcase/index.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -53,9 +20,37 @@
       <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webimcase/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
+            <state relative-caret-position="-1805">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myWorkPlace.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webimcase/myWorkPlace.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1508585097000" expanded="true" signature="1552:2623" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="1564:2623" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="2650:4487" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="2781:4486" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3067:3135" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3205:4475" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3241:4460" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3286:3442" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3480:3600" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3638:3758" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3805:4442" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="3972:4025" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="4138:4420" ph="..." />
+                <marker date="1508585097000" expanded="false" signature="4216:4227" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="4228:4393" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="4320:4361" ph="..." />
+                <marker date="1508585097000" expanded="true" signature="4849:5032" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,8 +156,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webimcase/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -439,14 +434,7 @@
       <workItem from="1508448823295" duration="1269000" />
       <workItem from="1508502588019" duration="3696000" />
       <workItem from="1508677174716" duration="2664000" />
-      <workItem from="1508947228404" duration="1765000" />
-    </task>
-    <task id="LOCAL-00067" summary="send us email about paid order">
-      <created>1504005567002</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1504005567002</updated>
+      <workItem from="1508947228404" duration="2875000" />
     </task>
     <task id="LOCAL-00068" summary="send us email about paid order">
       <created>1504006139916</created>
@@ -784,11 +772,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508586078445</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="add webimcase2.0">
+      <created>1508949070641</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1508949070642</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164783000" />
+    <option name="totallyTimeSpent" value="165893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
@@ -836,7 +831,8 @@
     <MESSAGE value="buy lending" />
     <MESSAGE value="add webimcase" />
     <MESSAGE value="webimcase change profile.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="webimcase change profile.php" />
+    <MESSAGE value="add webimcase2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="add webimcase2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -845,7 +841,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LENDINGS.html" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1288,14 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webimcase/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webimcase2/authorisation/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1382,10 +1369,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webimcase/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1805">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webimcase/myWorkPlace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508585097000" expanded="true" signature="1552:2623" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="1564:2623" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="2650:4487" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="2781:4486" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3067:3135" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3205:4475" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3241:4460" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3286:3442" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3480:3600" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3638:3758" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3805:4442" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="3972:4025" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="4138:4420" ph="..." />
+            <marker date="1508585097000" expanded="false" signature="4216:4227" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="4228:4393" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="4320:4361" ph="..." />
+            <marker date="1508585097000" expanded="true" signature="4849:5032" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webimcase/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
