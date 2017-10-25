@@ -38,7 +38,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" aria-label="Choose log">
                         <button aria-label="Log in" class="dropdown-item" onclick='location.href=
-                        "https://oauth.vk.com/authorize?client_id=6225333&display=page&redirect_uri=https://lendos.me/webimcase/myWorkPlace.php&response_type=code"'>in
+                        "https://oauth.vk.com/authorize?client_id=6225333&display=page&redirect_uri=https://lendos.me/webimcase2/myWorkPlace.php&response_type=code"'>in
                         </button>
                     </div>
                 </li>
@@ -53,7 +53,7 @@
         <hr>
         <p class="mb-0">
             <input aria-label="Log in" onclick='location.href=
-            "https://oauth.vk.com/authorize?client_id=6225333&display=page&redirect_uri=https://lendos.me/webimcase/myWorkPlace.php&response_type=code"'
+            "https://oauth.vk.com/authorize?client_id=6225333&display=page&redirect_uri=https://lendos.me/webimcase2/myWorkPlace.php&response_type=code"'
                    class="btn btn-primary login-button" type="submit" value="авторизоваться">
         </p>
     </div>

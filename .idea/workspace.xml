@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b2fc8e-2180-42d7-808e-595b235c1c81" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webimcase2/auth.php" afterPath="$PROJECT_DIR$/webimcase2/auth.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webimcase2/myWorkPlace.php" afterPath="$PROJECT_DIR$/webimcase2/myWorkPlace.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,48 +31,48 @@
       <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webimcase2/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="38" column="98" lean-forward="true" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
+            <state relative-caret-position="30">
+              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myWorkPlace.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="myWorkPlace.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webimcase2/myWorkPlace.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="90" column="98" lean-forward="false" selection-start-line="90" selection-start-column="98" selection-end-line="90" selection-end-column="98" />
+            <state relative-caret-position="321">
+              <caret line="28" column="137" lean-forward="false" selection-start-line="28" selection-start-column="137" selection-end-line="28" selection-end-column="137" />
               <folding>
-                <marker date="1508960157888" expanded="true" signature="1547:2618" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="1559:2618" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="2645:4173" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="2776:4172" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3062:3130" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3200:4161" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3236:4146" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3281:3444" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3491:4128" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3658:3711" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3824:4106" ph="..." />
-                <marker date="1508960157888" expanded="false" signature="3902:3913" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="3914:4079" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="4006:4047" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="4618:4692" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="4864:4899" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="4926:4957" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="5153:5184" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="5185:5463" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="5274:5448" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="5734:5765" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="5766:6044" ph="..." />
-                <marker date="1508960157888" expanded="true" signature="5855:6029" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="1548:2619" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="1560:2619" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="2646:4174" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="2777:4173" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3063:3131" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3201:4162" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3237:4147" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3282:3445" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3492:4129" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3659:3712" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3825:4107" ph="..." />
+                <marker date="1508960614270" expanded="false" signature="3903:3914" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="3915:4080" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="4007:4048" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="4619:4693" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="4865:4900" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="4927:4958" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="5154:5185" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="5186:5464" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="5275:5449" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="5735:5766" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="5767:6045" ph="..." />
+                <marker date="1508960614270" expanded="true" signature="5856:6030" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webimcase2/authorisation/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -148,11 +149,11 @@
         <option value="$PROJECT_DIR$/webimcase/authorisation/DataBase.php" />
         <option value="$PROJECT_DIR$/webimcase/index.php" />
         <option value="$PROJECT_DIR$/webimcase/myWorkPlace.php" />
-        <option value="$PROJECT_DIR$/webimcase2/auth.php" />
         <option value="$PROJECT_DIR$/webimcase2/friends.php" />
         <option value="$PROJECT_DIR$/webimcase2/css/myWorkPlace-styles.css" />
-        <option value="$PROJECT_DIR$/webimcase2/myWorkPlace.php" />
         <option value="$PROJECT_DIR$/webimcase2/authorisation/login.php" />
+        <option value="$PROJECT_DIR$/webimcase2/auth.php" />
+        <option value="$PROJECT_DIR$/webimcase2/myWorkPlace.php" />
       </list>
     </option>
   </component>
@@ -362,14 +363,7 @@
       <workItem from="1508448823295" duration="1269000" />
       <workItem from="1508502588019" duration="3696000" />
       <workItem from="1508677174716" duration="2664000" />
-      <workItem from="1508947228404" duration="6211000" />
-    </task>
-    <task id="LOCAL-00074" summary="change authaurization">
-      <created>1504604706115</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1504604706115</updated>
+      <workItem from="1508947228404" duration="6528000" />
     </task>
     <task id="LOCAL-00075" summary="change authaurization">
       <created>1504604903242</created>
@@ -707,11 +701,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508959807507</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="add webimcase2.0">
+      <created>1508960356823</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1508960356823</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169229000" />
+    <option name="totallyTimeSpent" value="169546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-6" width="1831" height="1086" extended-state="6" />
@@ -1287,51 +1288,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webimcase2/authorisation/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webimcase2/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="38" column="98" lean-forward="true" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
+        <state relative-caret-position="30">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webimcase2/myWorkPlace.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="90" column="98" lean-forward="false" selection-start-line="90" selection-start-column="98" selection-end-line="90" selection-end-column="98" />
+        <state relative-caret-position="321">
+          <caret line="28" column="137" lean-forward="false" selection-start-line="28" selection-start-column="137" selection-end-line="28" selection-end-column="137" />
           <folding>
-            <marker date="1508960157888" expanded="true" signature="1547:2618" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="1559:2618" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="2645:4173" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="2776:4172" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3062:3130" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3200:4161" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3236:4146" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3281:3444" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3491:4128" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3658:3711" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3824:4106" ph="..." />
-            <marker date="1508960157888" expanded="false" signature="3902:3913" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="3914:4079" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="4006:4047" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="4618:4692" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="4864:4899" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="4926:4957" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="5153:5184" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="5185:5463" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="5274:5448" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="5734:5765" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="5766:6044" ph="..." />
-            <marker date="1508960157888" expanded="true" signature="5855:6029" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="1548:2619" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="1560:2619" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="2646:4174" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="2777:4173" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3063:3131" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3201:4162" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3237:4147" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3282:3445" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3492:4129" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3659:3712" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3825:4107" ph="..." />
+            <marker date="1508960614270" expanded="false" signature="3903:3914" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="3915:4080" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="4007:4048" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="4619:4693" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="4865:4900" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="4927:4958" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="5154:5185" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="5186:5464" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="5275:5449" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="5735:5766" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="5767:6045" ph="..." />
+            <marker date="1508960614270" expanded="true" signature="5856:6030" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webimcase2/authorisation/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>

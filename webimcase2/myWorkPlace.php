@@ -26,7 +26,7 @@ if (!$_GET['code']) {
      * authairisation via vk and fb
      * out - $data
      */
-    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6225333&redirect_uri=https://lendos.me/webimcase/myWorkPlace.php&client_secret=zzWmki2cEDOHSFolLONg&code=' . $_GET['code']), true);
+    $token = json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=6225333&redirect_uri=https://lendos.me/webimcase2/myWorkPlace.php&client_secret=zzWmki2cEDOHSFolLONg&code=' . $_GET['code']), true);
 
     if (!$token) {
         header("Location: auth.php");
