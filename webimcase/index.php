@@ -1,11 +1,12 @@
 <?php
 if (isset($_COOKIE['id'])) {
     $_SESSION['id'] = $_COOKIE['id'];
-
-   header("Location: myWorkPlace.php");
-   die();
+    echo "yes";
+   //header("Location: myWorkPlace.php");
+   //die();
 } else {
-    header("Location: auth.php");
-    die();
+    echo "no";
+    //header("Location: auth.php");
+    //die();
 }
 ?>
