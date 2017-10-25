@@ -125,14 +125,18 @@ if (isset($_POST['exit'])) {
 * get current name of user
 */
 
-$name = $_SESSION["name"];
+$bd->start_session();
+$result = $bd->take_inf();
+$result->data_seek(0);
+$row = $result->fetch_array(MYSQLI_NUM);
+
+$user_name = $row[1];
 
 echo <<<_END
 <!-- Wellcome message for outlog users-->
     <div class="alert alert-success wellcome-message" role="alert" aria-label="You're not log in">
         <h4 class="alert-heading">Wellcome to WebimCase, $name</h4>
         <p>Now you can use all features of WebimCase</p>
-        <p>Hope, you'll fall in love $numF</p>
     </div>
 
 _END;
