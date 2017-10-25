@@ -125,12 +125,12 @@ if (isset($_POST['exit'])) {
 * get current name of user
 */
 
-$bd->start_session();
+
 $result = $bd->take_inf();
 $result->data_seek(0);
 $row = $result->fetch_array(MYSQLI_NUM);
 
-$user_name = $row[1];
+$name = $row[1];
 
 echo <<<_END
 <!-- Wellcome message for outlog users-->
