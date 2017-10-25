@@ -14,7 +14,7 @@ $bd =new DataBase($hn, $un, $pw, $db);
 if (!$_GET['code']) {
 
     //check if user has already auth
-    $bd->start_session();
+    session_start();
 
     if (!isset($_SESSION['id'])) {
         header("Location: auth.php");
